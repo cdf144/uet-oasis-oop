@@ -1,2 +1,2 @@
 # Java-OOP
-This is my repository for OOP class
+### This is my private repository for OOP class
