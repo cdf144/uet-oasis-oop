@@ -1,7 +1,7 @@
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.LinkedHashMap;
 
 public class StudentManagement {
     private static final int MAX_STUDENTS = 100;
@@ -20,7 +20,7 @@ public class StudentManagement {
 
     public String studentsByGroup() {
         StringBuilder output = new StringBuilder();
-        Map<String, List<Student>> studentGroupMap = new HashMap<>();
+        Map<String, List<Student>> studentGroupMap = new LinkedHashMap<>();
 
         for (int i=0; i<numberOfStudents; ++i) {
             if (students[i] != null) {
