@@ -25,6 +25,7 @@ public class StudentManagement {
                     && Objects.equals(newStudent.getId(), students[i].getId())
                     && Objects.equals(newStudent.getEmail(), students[i].getEmail())) {
                 exist = true;
+                break;
             }
         }
 
