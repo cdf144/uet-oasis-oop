@@ -1,3 +1,5 @@
+package DSA;
+
 import static java.lang.Math.sqrt;
 import static java.lang.Math.abs;
 
@@ -61,7 +63,7 @@ public class Sqrt {
 
     public static void main(String[] args) {
         double x=1;
-        // System.out.println(x + ": " + mySqrt_linear(x));
+        System.out.println(x + ": " + mySqrt_linear(x));
         System.out.println(x + ": " + mySqrt_binary_search(x));
         System.out.println(x + ": " + mySqrt_recursive(x));
         System.out.println(x + ": " + mySqrt_heron(x));
