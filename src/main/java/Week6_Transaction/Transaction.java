@@ -1,3 +1,5 @@
+package Week6_Transaction;
+
 public class Transaction {
     private String operation;
     private double amount;

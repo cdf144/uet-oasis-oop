@@ -1,3 +1,5 @@
+package Week7_Ke_thua_2;
+
 public class Person {
     private String name;
     private String address;

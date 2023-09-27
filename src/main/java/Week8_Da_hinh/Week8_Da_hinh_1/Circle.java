@@ -1,7 +1,8 @@
+package Week8_Da_hinh.Week8_Da_hinh_1;
+
 import java.util.Objects;
 
 public class Circle extends Shape {
-    protected Point center;
     protected double radius;
 
     /**
@@ -9,7 +10,6 @@ public class Circle extends Shape {
      */
     public Circle() {
         super();
-        this.center = new Point();
         this.radius = 0;
     }
 
@@ -19,7 +19,6 @@ public class Circle extends Shape {
      */
     public Circle(double radius) {
         super();
-        this.center = new Point();
         this.radius = radius;
     }
 
@@ -31,29 +30,7 @@ public class Circle extends Shape {
      */
     public Circle(double radius, String color, boolean filled) {
         super(color, filled);
-        this.center = new Point();
         this.radius = radius;
-    }
-
-    /**
-     * Circle constructor 4.
-     * @param center center
-     * @param radius radisu
-     * @param color color
-     * @param filled filled
-     */
-    public Circle(Point center, double radius, String color, boolean filled) {
-        super(color, filled);
-        this.center = center;
-        this.radius = radius;
-    }
-
-    public Point getCenter() {
-        return center;
-    }
-
-    public void setCenter(Point center) {
-        this.center = center;
     }
 
     public double getRadius() {
@@ -88,40 +65,11 @@ public class Circle extends Shape {
      */
     @Override
     public String toString() {
-        return String.format("Circle[center=%s,radius=%.1f,color=%s,filled=%s]",
-                this.center.toString(),
+        return String.format("Circle[radius=%.1f,color=%s,filled=%s]",
                 this.radius,
                 (Objects.equals(this.color, "")
                         ? "null" : this.color),
                 this.filled
         );
-    }
-
-    /**
-     * Boolean if 2 circles are equal.
-     * @param o another object
-     * @return boolean
-     */
-    @Override
-    public boolean equals(Object o) {
-        if (o instanceof Circle) {
-            Circle another = (Circle) o;
-            return Math.abs(this.radius - another.getRadius())
-                    <= 0.001
-                    && this.center.equals(another.getCenter());
-        }
-        return false;
-    }
-
-    /**
-     * Circle hashcode.
-     * @return hashcode
-     */
-    @Override
-    public int hashCode() {
-        int hash = 1000;
-        hash += this.center.hashCode();
-        hash += Double.hashCode(this.radius);
-        return hash;
     }
 }

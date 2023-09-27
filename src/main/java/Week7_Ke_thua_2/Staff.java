@@ -1,3 +1,5 @@
+package Week7_Ke_thua_2;
+
 public class Staff extends Person {
     private String school;
     private double pay;

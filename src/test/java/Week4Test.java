@@ -1,3 +1,6 @@
+import static org.junit.Assert.assertEquals;
+
+import Week3_JUnit.Week4;
 import org.junit.Test;
 
 public class Week4Test {
@@ -8,7 +11,7 @@ public class Week4Test {
         int expected = 3;
         int actual = Week4.max2Int(a, b);
 
-        org.junit.Assert.assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -17,7 +20,7 @@ public class Week4Test {
         int b = 0;
         int expected = 0;
         int actual = Week4.max2Int(a, b);
-        org.junit.Assert.assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -26,7 +29,7 @@ public class Week4Test {
         int b = 0;
         int expected = 0;
         int actual = Week4.max2Int(a, b);
-        org.junit.Assert.assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -35,7 +38,7 @@ public class Week4Test {
         int b = -3845734;
         int expected = -3845734;
         int actual = Week4.max2Int(a, b);
-        org.junit.Assert.assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -44,7 +47,7 @@ public class Week4Test {
         int b = 12;
         int expected = Integer.MAX_VALUE;
         int actual = Week4.max2Int(a, b);
-        org.junit.Assert.assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -52,7 +55,7 @@ public class Week4Test {
         int[] array = {1};
         int expected = 1;
         int actual = Week4.minArray(array);
-        org.junit.Assert.assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -60,7 +63,7 @@ public class Week4Test {
         int[] array = {1, 2, 3, 4, 5};
         int expected = 1;
         int actual = Week4.minArray(array);
-        org.junit.Assert.assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -68,7 +71,7 @@ public class Week4Test {
         int[] array = {-1, 2, -3, -4, 5};
         int expected = -4;
         int actual = Week4.minArray(array);
-        org.junit.Assert.assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -76,7 +79,7 @@ public class Week4Test {
         int[] array = {1, 2, 1, 3, 4, 1};
         int expected = 1;
         int actual = Week4.minArray(array);
-        org.junit.Assert.assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -84,7 +87,7 @@ public class Week4Test {
         int[] array = {};
         int expected = 0;
         int actual = Week4.minArray(array);
-        org.junit.Assert.assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -93,7 +96,7 @@ public class Week4Test {
         double height = 1.7;
         String expected = "Thiếu cân";
         String actual = Week4.calculateBMI(weight, height);
-        org.junit.Assert.assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -102,7 +105,7 @@ public class Week4Test {
         double height = 1.7;
         String expected = "Bình thường";
         String actual = Week4.calculateBMI(weight, height);
-        org.junit.Assert.assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -111,7 +114,7 @@ public class Week4Test {
         double height = 1.7;
         String expected = "Thừa cân";
         String actual = Week4.calculateBMI(weight, height);
-        org.junit.Assert.assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -120,7 +123,7 @@ public class Week4Test {
         double height = 1.7;
         String expected = "Béo phì";
         String actual = Week4.calculateBMI(weight, height);
-        org.junit.Assert.assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -130,6 +133,6 @@ public class Week4Test {
         double height = 1.7;
         String expected = "Bình thường";
         String actual = Week4.calculateBMI(weight, height);
-        org.junit.Assert.assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
 }

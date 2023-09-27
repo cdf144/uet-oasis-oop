@@ -1,3 +1,5 @@
+package Week8_Da_hinh.Week8_Da_hinh_2;
+
 import java.lang.Math;
 
 public class Point {
