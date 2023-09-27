@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Square extends Rectangle {
     public Square() {
         super();
@@ -32,6 +34,7 @@ public class Square extends Rectangle {
      * Set square side 2.
      * @param side Square side
      */
+    @Override
     public void setWidth(double side) {
         this.width = side;
         this.length = side;
@@ -41,6 +44,7 @@ public class Square extends Rectangle {
      * Set square side 3.
      * @param side Square side
      */
+    @Override
     public void setLength(double side) {
         this.width = side;
         this.length = side;
@@ -55,7 +59,7 @@ public class Square extends Rectangle {
         return String.format("Square[topLeft=%s,side=%.1f,color=%s,filled=%s]",
                 this.topLeft.toString(),
                 this.length,
-                (this.color.equals("")
+                (Objects.equals(this.color, "")
                         ? "null" : this.color),
                 this.filled
         );
@@ -66,6 +70,7 @@ public class Square extends Rectangle {
      * @param o another object
      * @return boolean
      */
+    @Override
     public boolean equals(Object o) {
         if (o instanceof Square) {
             Square another = (Square) o;
@@ -80,6 +85,7 @@ public class Square extends Rectangle {
      * Square hashcode.
      * @return hashcode
      */
+    @Override
     public int hashCode() {
         int hash = 3000;
         hash += this.topLeft.hashCode();

@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Rectangle extends Shape {
     protected Point topLeft;
     protected double width;
@@ -9,8 +11,8 @@ public class Rectangle extends Shape {
     public Rectangle() {
         super();
         this.topLeft = new Point();
-        this.width = 0;
-        this.length = 0;
+        this.width = 0.0;
+        this.length = 0.0;
     }
 
     /**
@@ -91,12 +93,13 @@ public class Rectangle extends Shape {
      * Rectangle toString override.
      * @return Rectangle string
      */
+    @Override
     public String toString() {
         return String.format("Rectangle[topLeft=%s,width=%.1f,length=%.1f,color=%s,filled=%s]",
                 this.topLeft.toString(),
                 this.width,
                 this.length,
-                (this.color.equals("")
+                (Objects.equals(this.color, "")
                         ? "null" : this.color),
                 this.filled
         );
@@ -107,6 +110,7 @@ public class Rectangle extends Shape {
      * @param o another object
      * @return boolean
      */
+    @Override
     public boolean equals(Object o) {
         if (o instanceof Rectangle) {
             Rectangle another = (Rectangle) o;

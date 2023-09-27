@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Circle extends Shape {
     protected Point center;
     protected double radius;
@@ -84,11 +86,12 @@ public class Circle extends Shape {
      * Circle toString override.
      * @return Circle string
      */
+    @Override
     public String toString() {
         return String.format("Circle[center=%s,radius=%.1f,color=%s,filled=%s]",
                 this.center.toString(),
                 this.radius,
-                (this.color.equals("")
+                (Objects.equals(this.color, "")
                         ? "null" : this.color),
                 this.filled
         );
@@ -99,6 +102,7 @@ public class Circle extends Shape {
      * @param o another object
      * @return boolean
      */
+    @Override
     public boolean equals(Object o) {
         if (o instanceof Circle) {
             Circle another = (Circle) o;

@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public abstract class Shape {
     protected String color;
     protected boolean filled;
@@ -44,9 +46,10 @@ public abstract class Shape {
      * Shape toString.
      * @return Shape string
      */
+    @Override
     public String toString() {
         return String.format("Shape[color=%s,filled=%s]",
-                (this.color.equals("")
+                (Objects.equals(this.color, "")
                         ? "null" : this.color),
                 this.filled
         );

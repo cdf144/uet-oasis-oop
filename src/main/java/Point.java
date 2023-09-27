@@ -8,8 +8,8 @@ public class Point {
      * Point constructor 1.
      */
     public Point() {
-        pointX = 0;
-        pointY = 0;
+        pointX = 0.0;
+        pointY = 0.0;
     }
 
     /**
@@ -44,12 +44,16 @@ public class Point {
      * @return distance
      */
     public double distance(Point newPoint) {
-        return Math.sqrt(
-                (this.pointX - newPoint.getPointX())
-                * (this.pointX - newPoint.getPointX())
-                + (this.pointY - newPoint.getPointY())
-                * (this.pointY - newPoint.getPointY())
-        );
+        if (newPoint != null) {
+            return Math.sqrt((this.pointX - newPoint.getPointX())
+                    * (this.pointX - newPoint.getPointX())
+                    + (this.pointY - newPoint.getPointY())
+                    * (this.pointY - newPoint.getPointY())
+            );
+        } else {
+            return Math.sqrt(this.pointX * this.pointX
+                    + this.pointY * this.pointY);
+        }
     }
 
     /**
@@ -57,6 +61,7 @@ public class Point {
      * @param o another object
      * @return boolean
      */
+    @Override
     public boolean equals(Object o) {
         if (o instanceof Point) {
             Point another = (Point) o;
@@ -72,6 +77,7 @@ public class Point {
      * Point toString.
      * @return Point string
      */
+    @Override
     public String toString() {
         return String.format("(%.1f,%.1f)",
                 this.pointX,
@@ -86,9 +92,9 @@ public class Point {
     @Override
     public int hashCode() {
         int hashCode = 1;
-        hashCode += Math.round(this.pointX);
-        hashCode += Math.round(this.pointY);
-        hashCode += Math.round(this.pointX * this.pointY);
+        hashCode += (int) Math.round(this.pointX);
+        hashCode += (int) Math.round(this.pointY);
+        hashCode += (int) Math.round(this.pointX * this.pointY);
         return hashCode;
     }
 }
