@@ -1,13 +1,8 @@
 package Week5;
 
-// Import your library
 import java.lang.Math;
 
-// Do not change the name of the Fraction class
-
 public class Fraction {
-    // Type your main code here
-
     private int numerator;
     private int denominator;
 

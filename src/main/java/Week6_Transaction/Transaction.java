@@ -15,9 +15,23 @@ public class Transaction {
      * @param balance account balance
      */
     public Transaction(String operation, double amount, double balance) {
-        this.operation = operation;
-        this.amount = amount;
-        this.balance = balance;
+        if (!operation.equals(Transaction.DEPOSIT) && !operation.equals(Transaction.WITHDRAW)) {
+            throw new IllegalArgumentException("Invalid operation: " + operation);
+        } else {
+            this.operation = operation;
+        }
+
+        if (amount < 0) {
+            throw new IllegalArgumentException("Invalid amount: " + amount);
+        } else {
+            this.amount = amount;
+        }
+
+        if (balance < 0) {
+            throw new IllegalArgumentException("Invalid balance: " + balance);
+        } else {
+            this.balance = balance;
+        }
     }
 
     public String getOperation() {
@@ -25,7 +39,11 @@ public class Transaction {
     }
 
     public void setOperation(String operation) {
-        this.operation = operation;
+        if (!operation.equals(Transaction.DEPOSIT) && !operation.equals(Transaction.WITHDRAW)) {
+            throw new IllegalArgumentException("Invalid operation: " + operation);
+        } else {
+            this.operation = operation;
+        }
     }
 
     public double getAmount() {
@@ -33,7 +51,11 @@ public class Transaction {
     }
 
     public void setAmount(double amount) {
-        this.amount = amount;
+        if (amount < 0) {
+            throw new IllegalArgumentException("Invalid amount: " + amount);
+        } else {
+            this.amount = amount;
+        }
     }
 
     public double getBalance() {
@@ -41,6 +63,10 @@ public class Transaction {
     }
 
     public void setBalance(double balance) {
-        this.balance = balance;
+        if (balance < 0) {
+            throw new IllegalArgumentException("Invalid balance: " + balance);
+        } else {
+            this.balance = balance;
+        }
     }
 }

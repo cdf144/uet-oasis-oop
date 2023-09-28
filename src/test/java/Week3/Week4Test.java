@@ -1,7 +1,10 @@
-import static org.junit.Assert.assertEquals;
+package Week3;
 
 import Week3_JUnit.Week4;
+
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class Week4Test {
     @Test

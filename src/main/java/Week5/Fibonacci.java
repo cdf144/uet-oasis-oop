@@ -1,7 +1,6 @@
 package Week5;
 
 public class Fibonacci {
-
     /**
      * Return nth Fibonacci number.
      * @param n nth Fibonacci number
@@ -31,13 +30,4 @@ public class Fibonacci {
 
         return fn;
     }
-
-    /**
-     * Main method.
-     * @param args arguments
-     */
-    public static void main(String[] args) {
-
-    }
-
 }

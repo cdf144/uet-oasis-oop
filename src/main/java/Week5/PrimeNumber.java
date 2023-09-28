@@ -1,8 +1,8 @@
 package Week5;
 
-public class PrimeNumber {
-    // Type your main code here
+import java.util.stream.IntStream;
 
+public class PrimeNumber {
     /**
      * Return true if n is prime, false if not.
      * @param n number to evaluate
@@ -11,7 +11,7 @@ public class PrimeNumber {
         if (n <= 1) {
             return false;
         }
-        for (int i = 2; i < n / 2; ++i) {
+        for (int i = 2; i <= (n / 2); ++i) {
             if (n % i == 0) {
                 return false;
             }
@@ -24,6 +24,10 @@ public class PrimeNumber {
      * @param args arguments
      */
     public static void main(String[] args) {
-
+        int n = 75;
+        IntStream
+                .rangeClosed(0, n)
+                .mapToObj(i -> i + " : " + isPrime(i))
+                .forEach(System.out::println);
     }
 }

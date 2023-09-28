@@ -5,14 +5,14 @@ import java.util.Objects;
 
 public class Account {
     private double balance;
-    private ArrayList<Transaction> transitionList;
+    private final ArrayList<Transaction> transactionList;
 
     /**
      * Account constructor.
      */
     public Account() {
         balance = 0;
-        transitionList = new ArrayList<>();
+        transactionList = new ArrayList<>();
     }
 
     /**
@@ -25,8 +25,24 @@ public class Account {
         } else {
             this.balance += amount;
             Transaction transaction = new Transaction("deposit", amount, this.balance);
-            transitionList.add(transaction);
+            transactionList.add(transaction);
         }
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public void setBalance(double balance) {
+        if (balance < 0) {
+            throw new IllegalArgumentException("Invalid balance: " + balance);
+        } else {
+            this.balance = balance;
+        }
+    }
+
+    public ArrayList<Transaction> getTransactionList() {
+        return transactionList;
     }
 
     /**
@@ -41,7 +57,7 @@ public class Account {
         } else {
             this.balance -= amount;
             Transaction transaction = new Transaction("withdraw", amount, this.balance);
-            transitionList.add(transaction);
+            transactionList.add(transaction);
         }
     }
 
@@ -65,7 +81,7 @@ public class Account {
      */
     public void printTransaction() {
         int i = 1;
-        for (Transaction transaction : transitionList) {
+        for (Transaction transaction : transactionList) {
             System.out.printf("Giao dich %d: %s $%.2f. So du luc nay: $%.2f.%n",
                     i++,
                     (Objects.equals(transaction.getOperation(), Transaction.DEPOSIT))

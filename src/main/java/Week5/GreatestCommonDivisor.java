@@ -43,6 +43,8 @@ public class GreatestCommonDivisor {
      * @param args argument
      */
     public static void main(String[] args) {
-
+        int a = 88119936;
+        int b = 280256;
+        System.out.println(gcd(a,b));
     }
 }
