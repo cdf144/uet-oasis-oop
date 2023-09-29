@@ -1,4 +1,4 @@
-package Week8_Da_hinh.Week8_Da_hinh_2;
+package Week8.Da_hinh_2;
 
 import java.util.Objects;
 
@@ -100,7 +100,8 @@ public class Circle extends Shape {
     }
 
     /**
-     * Boolean if 2 circles are equal.
+     * Boolean if 2 circles are equal, not counting
+     * color and filled.
      * @param o another object
      * @return boolean
      */
@@ -116,7 +117,8 @@ public class Circle extends Shape {
     }
 
     /**
-     * Circle hashcode.
+     * Circle hashcode, not taking into account color
+     * and filled.
      * @return hashcode
      */
     @Override

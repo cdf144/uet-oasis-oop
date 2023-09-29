@@ -1,4 +1,4 @@
-package Week8_Da_hinh.Week8_Da_hinh_2;
+package Week8.Da_hinh_2;
 
 import java.util.ArrayList;
 import java.util.LinkedHashSet;
@@ -13,6 +13,10 @@ public class Layer {
 
     public void addShape(Shape shape) {
         shapes.add(shape);
+    }
+
+    public List<Shape> getShapes() {
+        return shapes;
     }
 
     /**

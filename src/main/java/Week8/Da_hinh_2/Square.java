@@ -1,4 +1,4 @@
-package Week8_Da_hinh.Week8_Da_hinh_2;
+package Week8.Da_hinh_2;
 
 import java.util.Objects;
 
@@ -68,7 +68,8 @@ public class Square extends Rectangle {
     }
 
     /**
-     * Boolean if 2 rectangles are equal.
+     * Boolean if 2 rectangles are equal, not counting
+     * color and filled.
      * @param o another object
      * @return boolean
      */
@@ -84,7 +85,8 @@ public class Square extends Rectangle {
     }
 
     /**
-     * Square hashcode.
+     * Square hashcode, not taking into account color
+     * and filled.
      * @return hashcode
      */
     @Override

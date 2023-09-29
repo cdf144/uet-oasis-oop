@@ -1,4 +1,4 @@
-package Week8_Da_hinh.Week8_Da_hinh_1;
+package Week8.Da_hinh_1;
 
 import java.util.Objects;
 
