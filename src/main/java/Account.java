@@ -33,8 +33,33 @@ public abstract class Account {
     }
 
     public double getBalance() {
-        return balance;
+        return this.balance;
     }
 
+    public void doWithdrawing(double amount) {
+        if (amount < 0 || amount > this.balance) {
+            throw new IllegalArgumentException();
+        }
+    }
 
+    public void doDepositing(double amount) {
+        if (amount < 0) {
+            throw new IllegalArgumentException();
+        }
+    }
+
+    public String getTransactionHistory() {
+        StringBuilder transactionHistory = new StringBuilder();
+        transactionHistory.append(String.format(
+                "Lịch sử giao dịch của tài khoản %d:",
+                this.accountNumber)
+        );
+        for (Transaction transaction : transactionList) {
+            transactionHistory.append("\n");
+        }
+        return transactionHistory.toString();
+    }
+
+    public abstract void withdraw(double amount);
+    public abstract void deposit(double amount);
 }
