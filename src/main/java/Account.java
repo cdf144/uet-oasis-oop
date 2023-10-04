@@ -36,18 +36,37 @@ public abstract class Account {
         return this.balance;
     }
 
-    public void doWithdrawing(double amount) {
-        if (amount < 0 || amount > this.balance) {
-            throw new IllegalArgumentException();
-        }
-    }
-
-    public void doDepositing(double amount) {
+    /**
+     * Check if withdraw amount is valid.
+     * @param amount withdraw amount
+     */
+    public void doWithdrawing(double amount) throws InsufficientFundsException,
+            InvalidFundingAmountException {
         if (amount < 0) {
-            throw new IllegalArgumentException();
+            throw new InvalidFundingAmountException(amount);
+        } else if (amount > this.balance) {
+            throw new InsufficientFundsException(amount);
+        } else {
+            this.balance -= amount;
         }
     }
 
+    /**
+     * Check if deposit amount is valid.
+     * @param amount deposit amount
+     */
+    public void doDepositing(double amount) throws InvalidFundingAmountException {
+        if (amount < 0) {
+            throw new InvalidFundingAmountException(amount);
+        } else {
+            this.balance += amount;
+        }
+    }
+
+    /**
+     * Get transaction history string.
+     * @return transaction history string
+     */
     public String getTransactionHistory() {
         StringBuilder transactionHistory = new StringBuilder();
         transactionHistory.append(String.format(
@@ -56,10 +75,30 @@ public abstract class Account {
         );
         for (Transaction transaction : transactionList) {
             transactionHistory.append("\n");
+            transactionHistory.append(transaction.getTransactionSummary());
         }
         return transactionHistory.toString();
     }
 
+    public void addTransaction(Transaction transaction) {
+        this.transactionList.add(transaction);
+    }
+
+    /**
+     * Check if 2 accounts are the same based on account number.
+     * @param o object
+     * @return boolean if 2 accounts are the same
+     */
+    @Override
+    public boolean equals(Object o) {
+        if (o instanceof Account) {
+            Account another = (Account) o;
+            return this.accountNumber == another.getAccountNumber();
+        }
+        return false;
+    }
+
     public abstract void withdraw(double amount);
+
     public abstract void deposit(double amount);
 }

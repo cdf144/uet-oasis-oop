@@ -59,8 +59,8 @@ public class Transaction {
      */
     public String getTransactionSummary() {
         return String.format(
-                "- Kiểu giao dịch: %s. Số dư ban đầu: $%.2f. " +
-                        "Số tiền: $%.2f. Số dư cuối: $%.2f.",
+                "- Kiểu giao dịch: %s. Số dư ban đầu: $%.2f. "
+                        + "Số tiền: $%.2f. Số dư cuối: $%.2f.",
                 getTransactionTypeString(this.type),
                 this.initialBalance,
                 this.amount,

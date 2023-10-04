@@ -1,6 +1,6 @@
 package Week9;
 
-public class MotorBike extends Vehicle{
+public class MotorBike extends Vehicle {
     private boolean hasSidecar;
 
     public MotorBike() {
@@ -13,11 +13,16 @@ public class MotorBike extends Vehicle{
         this.hasSidecar = hasSidecar;
     }
 
-    public MotorBike(String brand, String model, String registrationNumber, Person owner, boolean hasSidecar) {
+    public MotorBike(String brand, String model,
+                     String registrationNumber, Person owner, boolean hasSidecar) {
         super(brand, model, registrationNumber, owner);
         this.hasSidecar = hasSidecar;
     }
 
+    /**
+     * Get motorbike info.
+     * @return motorbike info string
+     */
     public String getInfo() {
         StringBuilder motorBikeInfo = new StringBuilder();
         motorBikeInfo.append("Motor Bike:\n");

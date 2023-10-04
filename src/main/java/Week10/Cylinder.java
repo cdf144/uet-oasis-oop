@@ -1,6 +1,6 @@
 package Week10;
 
-public class Cylinder extends Circle{
+public class Cylinder extends Circle {
     private double height;
 
     /**
@@ -47,7 +47,7 @@ public class Cylinder extends Circle{
     }
 
     /**
-     * Cylinder to String
+     * Cylinder to String.
      * @return cylinder string
      */
     @Override
