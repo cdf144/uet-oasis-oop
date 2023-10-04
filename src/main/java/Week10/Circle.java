@@ -53,12 +53,13 @@ public class Circle {
     }
 
     /**
-     * Circle to String
+     * Circle to String.
      * @return circle string
      */
     @Override
     public String toString() {
-        String circleString = String.format("Circle[radius=%.1f,color=%s]",
+        String circleString =
+                String.format("Circle[radius=%.1f,color=%s]",
                 this.radius,
                 this.color);
         return circleString;

@@ -1,5 +1,3 @@
-import Week9.Vehicle;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -49,22 +47,35 @@ public class Customer {
         return accountList;
     }
 
+    /**
+     * Get customer info.
+     * @return Customer info string
+     */
     public String getCustomerInfo() {
-        StringBuilder customerInfo = new StringBuilder();
-        customerInfo.append(String.format("%s %d",
-                this.fullName,
-                this.idNumber)
-        );
-        for (Account account : accountList) {
-
-        }
-        return customerInfo.toString();
+        return String.format("Số CMND: %d."
+                        + " Họ tên: %s.",
+                this.idNumber,
+                this.fullName);
     }
 
+    /**
+     * Add account.
+     * @param account account
+     */
     public void addAccount(Account account) {
+        for (Account accountCompare : accountList) {
+            if (accountCompare.equals(account)) {
+                accountCompare = account;
+                return;
+            }
+        }
         accountList.add(account);
     }
 
+    /**
+     * Remove account from customer account list.
+     * @param account account to remove
+     */
     public void removeAccount(Account account) {
         for (Account accountCompare : this.accountList) {
             if (Objects.equals(accountCompare, account)) {

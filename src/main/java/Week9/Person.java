@@ -57,6 +57,10 @@ public class Person {
         this.vehicleList.add(vehicle);
     }
 
+    /**
+     * Remove vehicle from possession.
+     * @param registrationNumber vehicle registration number
+     */
     public void removeVehicle(String registrationNumber) {
         for (Vehicle vehicle : this.vehicleList) {
             if (Objects.equals(vehicle.getRegistrationNumber(), registrationNumber)) {
@@ -66,7 +70,11 @@ public class Person {
         }
     }
 
-    public String getVehicleInfo() {
+    /**
+     * Get owned vehicles info.
+     * @return vehicle info string
+     */
+    public String getVehiclesInfo() {
         StringBuilder vehicleInfo = new StringBuilder();
         vehicleInfo.append(String.format("%s has", this.name));
 
