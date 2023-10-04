@@ -1,7 +1,5 @@
 package Week5;
 
-import Week5.Fraction;
-
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
