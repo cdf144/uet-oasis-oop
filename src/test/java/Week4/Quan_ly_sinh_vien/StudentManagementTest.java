@@ -58,10 +58,10 @@ public class StudentManagementTest {
 
         String expectedOutput =
                 "K62CB\n" +
-                "Alice - 123456789 - K62CB - alice@example.com\n" +
-                "Carol - 345678912 - K62CB - carol@example.com\n" +
-                "K63CB\n" +
-                "Bob - 987654321 - K63CB - bob@example.com\n";
+                        "Alice - 123456789 - K62CB - alice@example.com\n" +
+                        "Carol - 345678912 - K62CB - carol@example.com\n" +
+                        "K63CB\n" +
+                        "Bob - 987654321 - K63CB - bob@example.com\n";
 
         assertEquals(expectedOutput, studentManagement.studentsByGroup());
     }
@@ -109,21 +109,21 @@ public class StudentManagementTest {
 
         String expectedOutput1 =
                 "K62CC\n" +
-                "Nguyen Van An - 17020001 - K62CC - 17020001@vnu.edu.vn\n" +
-                "Nguyen Van B - 17020002 - K62CC - 17020002@vnu.edu.vn\n" +
-                "K62CB\n" +
-                "Nguyen Van C - 17020003 - K62CB - 17020003@vnu.edu.vn\n" +
-                "Nguyen Van D - 17020004 - K62CB - 17020004@vnu.edu.vn\n";
+                        "Nguyen Van An - 17020001 - K62CC - 17020001@vnu.edu.vn\n" +
+                        "Nguyen Van B - 17020002 - K62CC - 17020002@vnu.edu.vn\n" +
+                        "K62CB\n" +
+                        "Nguyen Van C - 17020003 - K62CB - 17020003@vnu.edu.vn\n" +
+                        "Nguyen Van D - 17020004 - K62CB - 17020004@vnu.edu.vn\n";
 
         assertEquals(expectedOutput1, studentManage.studentsByGroup());
 
         studentManage.removeStudent("17020003");
         String expectedOutput2 =
                 "K62CC\n" +
-                "Nguyen Van An - 17020001 - K62CC - 17020001@vnu.edu.vn\n" +
-                "Nguyen Van B - 17020002 - K62CC - 17020002@vnu.edu.vn\n" +
-                "K62CB\n" +
-                "Nguyen Van D - 17020004 - K62CB - 17020004@vnu.edu.vn\n";
+                        "Nguyen Van An - 17020001 - K62CC - 17020001@vnu.edu.vn\n" +
+                        "Nguyen Van B - 17020002 - K62CC - 17020002@vnu.edu.vn\n" +
+                        "K62CB\n" +
+                        "Nguyen Van D - 17020004 - K62CB - 17020004@vnu.edu.vn\n";
 
         assertEquals(expectedOutput2, studentManage.studentsByGroup());
     }
