@@ -87,19 +87,19 @@ public class Bank {
                 }
             }
             int i = 0;
-            while (i < customerList.size()) {
-                if (customerList.get(i).getIdNumber()
+            while (i < this.customerList.size()) {
+                if (this.customerList.get(i).getIdNumber()
                         == customerId) {
                     for (int j = 0;
                          j < newCustomer.getAccountList().size(); j++) {
-                        customerList.get(i)
+                        this.customerList.get(i)
                                 .addAccount(newCustomer.getAccountList().get(j));
                     }
                     break;
                 }
                 i++;
             }
-            if (i == customerList.size()) {
+            if (i == this.customerList.size()) {
                 this.customerList.add(newCustomer);
             }
         }
@@ -117,8 +117,8 @@ public class Bank {
     public String getCustomersInfoByIdOrder() {
         if (this.isNotEmpty()) {
             StringBuilder customersInfoByIdOrder = new StringBuilder();
-            customerList.sort(new IdComparator());
-            for (Customer customer : customerList) {
+            this.customerList.sort(new IdComparator());
+            for (Customer customer : this.customerList) {
                 if (customersInfoByIdOrder.length() == 0) {
                     customersInfoByIdOrder.append(customer.getCustomerInfo());
                 } else {
@@ -140,8 +140,8 @@ public class Bank {
     public String getCustomersInfoByNameOrder() {
         if (this.isNotEmpty()) {
             StringBuilder customersInfoByIdOrder = new StringBuilder();
-            customerList.sort(new NameComparator());
-            for (Customer customer : customerList) {
+            this.customerList.sort(new NameComparator());
+            for (Customer customer : this.customerList) {
                 if (customersInfoByIdOrder.length() == 0) {
                     customersInfoByIdOrder.append(customer.getCustomerInfo());
                 } else {
