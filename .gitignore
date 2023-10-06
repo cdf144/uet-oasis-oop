@@ -6,6 +6,7 @@ target/
 /.idea/
 /src/main/java/DSA
 /src/main/java/edu/princeton/cs/algs4
+/src/test/java/DSA/Sorting/
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
