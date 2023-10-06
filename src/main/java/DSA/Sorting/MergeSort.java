@@ -4,8 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MergeSort {
+    private static final int CUTOFF = 7;
+
     public static <T extends Comparable<T>> List<T> sort(List<T> arr) {
         if (arr.size() <= 1) return arr;
+        if (arr.size() <= CUTOFF) {
+            InsertionSort.sort(arr);
+            return arr;
+        }
         int mid = arr.size() / 2;
 
         List<T> left = new ArrayList<>(arr.subList(0, mid));
