@@ -1,6 +1,5 @@
 package DSA.Sorting;
 
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
@@ -79,6 +78,54 @@ public class SortTests {
     }
 
     @Test
+    public void testMergeSort() {
+        int size = 800000;
+        List<Integer> list = new ArrayList<>(size);
+        Random random = new Random();
+
+        for (int i = 1; i <= size; i++) {
+            int element = random.nextInt(size);
+            list.add(element);
+        }
+
+        Stopwatch stopwatch = new Stopwatch();
+        List<Integer> sortedList = MergeSort.sort(list);
+        double timeTaken = stopwatch.elapsedTime();
+        System.out.printf(
+                "%-25s | %-10d | %7.3fs%n",
+                "Merge sort",
+                size,
+                timeTaken
+        );
+
+        assertTrue(isSorted(sortedList));
+    }
+
+    @Test
+    public void testHeapSort() {
+        int size = 800000;
+        List<Integer> list = new ArrayList<>(size);
+        Random random = new Random();
+
+        for (int i = 1; i <= size; i++) {
+            int element = random.nextInt(size);
+            list.add(element);
+        }
+
+        Stopwatch stopwatch = new Stopwatch();
+        HeapSort.sort(list);
+        double timeTaken = stopwatch.elapsedTime();
+        System.out.printf(
+                "%-25s | %-10d | %7.3fs%n",
+                "Heap sort",
+                size,
+                timeTaken
+        );
+
+        assertTrue(isSorted(list));
+    }
+
+    @Test
     public void testCountingSort() {
         int size = 800000;
         List<Integer> list = new ArrayList<>(size);
@@ -104,7 +151,7 @@ public class SortTests {
 
     @Test
     public void testBubbleSort() {
-        int size = 40000;
+        int size = 30000;
         List<Integer> list = new ArrayList<>(size);
         Random random = new Random();
 

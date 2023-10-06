@@ -8,7 +8,7 @@ public class QuickSort {
      * rightmost elements as pivots.
      * @param arr Array (List) to sort
      */
-    public static void sort(List<Integer> arr, int low, int high) {
+    public static <T extends Comparable<T>> void sort(List<T> arr, int low, int high) {
         if (low < high) {
             // Find the correct place of pivot to start partitioning
             int pivotIndex = partition(arr, low, high);
@@ -27,11 +27,11 @@ public class QuickSort {
      * @param high higher bound of index
      * @return pivot index in Array (List)
      */
-    private static int partition(List<Integer> arr, int low, int high) {
+    private static <T extends Comparable<T>> int partition(List<T> arr, int low, int high) {
         int pivotIndex = low;
-        int pivotVal = arr.get(high); // rightmost element as index
+        T pivotVal = arr.get(high); // rightmost element as index
         for (int i = low; i < high; i++) {
-            if (arr.get(i) < pivotVal) {
+            if (arr.get(i).compareTo(pivotVal) < 0) {
                 swap(arr, i, pivotIndex);
                 pivotIndex++;
             }
@@ -48,11 +48,11 @@ public class QuickSort {
      * @param high higher bound of index
      * @return pivot index in Array (List)
      */
-    private static int partitionLeftmostIndex(List<Integer> arr, int low, int high) {
+    private static <T extends Comparable<T>> int partitionLeftmostIndex(List<T> arr, int low, int high) {
         int pivotIndex = high; // temporary pivot index
-        int pivot = arr.get(low); // leftmost element as index
+        T pivot = arr.get(low); // leftmost element as index
         for (int i = high; i > low; i--) {
-            if (arr.get(i) > pivot) {
+            if (arr.get(i).compareTo(pivot) > 0) {
                 // values larger than pivot gets swapped to the right
                 swap(arr, i, pivotIndex);
                 pivotIndex--; // iterate temporary pivot index
@@ -69,8 +69,8 @@ public class QuickSort {
      * @param idx1 first element index
      * @param idx2 second element index
      */
-    private static void swap(List<Integer> arr, int idx1, int idx2) {
-        int tmp = arr.get(idx1);
+    private static <T extends Comparable<T>> void swap(List<T> arr, int idx1, int idx2) {
+        T tmp = arr.get(idx1);
         arr.set(idx1, arr.get(idx2));
         arr.set(idx2, tmp);
     }
