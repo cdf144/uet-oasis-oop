@@ -1,6 +1,4 @@
-package Week8.Da_hinh_2;
-
-import java.lang.Math;
+package Week8.Da_hinh_3;
 
 public class Point {
     private double pointX;

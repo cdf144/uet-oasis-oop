@@ -1,4 +1,4 @@
-package Week10.Ke_thua_1;
+package Week11.Ke_thua_1;
 
 public class Circle {
     private double radius;
@@ -6,7 +6,7 @@ public class Circle {
     protected static final double PI = 3.1415926535;
 
     /**
-     * Circle constructor 1.
+     * Week10.Circle constructor 1.
      */
     public Circle() {
         this.radius = 0;
@@ -14,7 +14,7 @@ public class Circle {
     }
 
     /**
-     * Circle constructor 2.
+     * Week10.Circle constructor 2.
      *
      * @param radius radius
      */
@@ -24,7 +24,7 @@ public class Circle {
     }
 
     /**
-     * Circle constructor 3.
+     * Week10.Circle constructor 3.
      *
      * @param radius radius
      * @param color  color
@@ -55,14 +55,14 @@ public class Circle {
     }
 
     /**
-     * Circle to String.
+     * Week10.Circle to String.
      *
      * @return circle string
      */
     @Override
     public String toString() {
         String circleString =
-                String.format("Circle[radius=%.1f,color=%s]",
+                String.format("Week10.Circle[radius=%.1f,color=%s]",
                         this.radius,
                         this.color);
         return circleString;
