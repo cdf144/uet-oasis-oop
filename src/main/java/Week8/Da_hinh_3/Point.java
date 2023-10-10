@@ -5,7 +5,7 @@ public class Point {
     private double pointY;
 
     /**
-     * Point constructor 1.
+     * Week10.Point constructor 1.
      */
     public Point() {
         pointX = 0.0;
@@ -13,7 +13,7 @@ public class Point {
     }
 
     /**
-     * Point constructor 2.
+     * Week10.Point constructor 2.
      *
      * @param pointX pointX
      * @param pointY pointY
@@ -77,9 +77,9 @@ public class Point {
     }
 
     /**
-     * Point toString.
+     * Week10.Point toString.
      *
-     * @return Point string
+     * @return Week10.Point string
      */
     @Override
     public String toString() {
@@ -90,7 +90,7 @@ public class Point {
     }
 
     /**
-     * Point hashcode.
+     * Week10.Point hashcode.
      *
      * @return hashcode
      */
