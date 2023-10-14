@@ -2,7 +2,7 @@ package DSA.Sorting;
 
 import java.util.List;
 
-public class QuickSort {
+public class LomutoQuickSort {
     /**
      * The default sort method uses
      * rightmost elements as pivots.
@@ -28,12 +28,13 @@ public class QuickSort {
      * @return pivot index in Array (List)
      */
     private static <T extends Comparable<T>> int partition(List<T> arr, int low, int high) {
-        int pivotIndex = low;
+        int pivotIndex = low; // temporary pivot index
         T pivotVal = arr.get(high); // rightmost element as index
         for (int i = low; i < high; i++) {
             if (arr.get(i).compareTo(pivotVal) < 0) {
+                // values larger than pivot gets swapped to the left
                 swap(arr, i, pivotIndex);
-                pivotIndex++;
+                pivotIndex++; // iterate temporary pivot index
             }
         }
         swap(arr, high, pivotIndex);
@@ -49,13 +50,13 @@ public class QuickSort {
      * @return pivot index in Array (List)
      */
     private static <T extends Comparable<T>> int partitionLeftmostIndex(List<T> arr, int low, int high) {
-        int pivotIndex = high; // temporary pivot index
+        int pivotIndex = high;
         T pivot = arr.get(low); // leftmost element as index
         for (int i = high; i > low; i--) {
             if (arr.get(i).compareTo(pivot) > 0) {
                 // values larger than pivot gets swapped to the right
                 swap(arr, i, pivotIndex);
-                pivotIndex--; // iterate temporary pivot index
+                pivotIndex--;
             }
         }
         swap(arr, low, pivotIndex);

@@ -54,7 +54,7 @@ public class SortTests {
     }
 
     @Test
-    public void testQuickSort() {
+    public void testLomutoQuickSort() {
         int size = 800000;
         List<Integer> list = new ArrayList<>(size);
         Random random = new Random();
@@ -65,11 +65,35 @@ public class SortTests {
         }
 
         Stopwatch stopwatch = new Stopwatch();
-        QuickSort.sort(list, 0, list.size() - 1);
+        LomutoQuickSort.sort(list, 0, list.size() - 1);
         double timeTaken = stopwatch.elapsedTime();
         System.out.printf(
                 "%-25s | %-10d | %7.3fs%n",
-                "Quicksort",
+                "Lomuto Quicksort",
+                size,
+                timeTaken
+        );
+
+        assertTrue(isSorted(list));
+    }
+
+    @Test
+    public void testDualPivotQuickSort() {
+        int size = 800000;
+        List<Integer> list = new ArrayList<>(size);
+        Random random = new Random();
+
+        for (int i = 1; i <= size; i++) {
+            int element = random.nextInt(size);
+            list.add(element);
+        }
+
+        Stopwatch stopwatch = new Stopwatch();
+        DualPivotQuickSort.sort(list, 0, list.size() - 1);
+        double timeTaken = stopwatch.elapsedTime();
+        System.out.printf(
+                "%-25s | %-10d | %7.3fs%n",
+                "Dual-Pivot Quicksort",
                 size,
                 timeTaken
         );
