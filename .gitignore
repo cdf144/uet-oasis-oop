@@ -4,10 +4,6 @@ target/
 !**/src/test/**/target/
 *.class
 /.idea/
-/src/
-!/src/main/java/DSA/**
-!/src/main/java/edu/princeton/cs/algs4/**
-!/src/test/java/DSA/**
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
