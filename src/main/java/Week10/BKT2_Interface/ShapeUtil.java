@@ -1,4 +1,4 @@
-package Week10.KT2_Interface;
+package Week10.BKT2_Interface;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -8,6 +8,7 @@ import java.util.Map;
 public class ShapeUtil {
     /**
      * Print info of object list.
+     *
      * @param shapes shapes list
      * @return info string
      */
@@ -26,18 +27,18 @@ public class ShapeUtil {
                 if (shape instanceof Circle) {
                     if (shapesGroupMap.get("Circle") == null) {
                         List<GeometricObject> circleList = new ArrayList<>();
-                        circleList.add((Circle) shape);
+                        circleList.add(shape);
                         shapesGroupMap.put("Circle", circleList);
                     } else {
-                        shapesGroupMap.get("Circle").add((Circle) shape);
+                        shapesGroupMap.get("Circle").add(shape);
                     }
                 } else if (shape instanceof Triangle) {
                     if (shapesGroupMap.get("Triangle") == null) {
                         List<GeometricObject> triangleList = new ArrayList<>();
-                        triangleList.add((Triangle) shape);
+                        triangleList.add(shape);
                         shapesGroupMap.put("Triangle", triangleList);
                     } else {
-                        shapesGroupMap.get("Triangle").add((Triangle) shape);
+                        shapesGroupMap.get("Triangle").add(shape);
                     }
                 }
             } catch (NullPointerException e) {

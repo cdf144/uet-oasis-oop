@@ -8,6 +8,7 @@ public class Addition extends BinaryExpression {
 
     /**
      * String of expression.
+     *
      * @return expression String
      */
     @Override
@@ -17,7 +18,7 @@ public class Addition extends BinaryExpression {
                 + " + "
                 + right.toString()
                 + ")"
-        ;
+                ;
     }
 
     @Override

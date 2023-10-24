@@ -1,4 +1,4 @@
-package Week9.KT1_Abstract;
+package Week9.BKT1_Abstract;
 
 public abstract class Vehicle {
     protected String brand;

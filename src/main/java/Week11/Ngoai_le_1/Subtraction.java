@@ -7,6 +7,7 @@ public class Subtraction extends BinaryExpression {
 
     /**
      * String of expression.
+     *
      * @return expression String
      */
     @Override

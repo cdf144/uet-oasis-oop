@@ -6,7 +6,8 @@ public abstract class BinaryExpression extends Expression {
 
     /**
      * BinaryExpression constructor.
-     * @param left left Expression
+     *
+     * @param left  left Expression
      * @param right right Expression
      */
     public BinaryExpression(Expression left, Expression right) {

@@ -1,4 +1,4 @@
-package Week9.KT1_Abstract;
+package Week9.BKT1_Abstract;
 
 public class Car extends Vehicle {
     private int numberOfDoors;
@@ -42,34 +42,27 @@ public class Car extends Vehicle {
      * @return string of car info
      */
     public String getInfo() {
-        StringBuilder carInfo = new StringBuilder();
-        carInfo.append("Car:\n");
-        carInfo.append("\t")
-                .append(String.format("Brand: %s",
-                        this.brand)
-                )
-                .append("\n");
-        carInfo.append("\t")
-                .append(String.format("Model: %s",
-                        this.model)
-                )
-                .append("\n");
-        carInfo.append("\t")
-                .append(String.format("Registration Number: %s",
-                        this.registrationNumber)
-                )
-                .append("\n");
-        carInfo.append("\t")
-                .append(String.format("Number of Doors: %s",
-                        this.numberOfDoors)
-                )
-                .append("\n");
-        carInfo.append("\t")
-                .append(String.format("Belongs to %s - %s",
+        return "Car:\n" +
+                "\t" +
+                String.format("Brand: %s",
+                        this.brand) +
+                "\n" +
+                "\t" +
+                String.format("Model: %s",
+                        this.model) +
+                "\n" +
+                "\t" +
+                String.format("Registration Number: %s",
+                        this.registrationNumber) +
+                "\n" +
+                "\t" +
+                String.format("Number of Doors: %s",
+                        this.numberOfDoors) +
+                "\n" +
+                "\t" +
+                String.format("Belongs to %s - %s",
                         this.owner.getName(),
-                        this.owner.getAddress())
-                );
-        return carInfo.toString();
+                        this.owner.getAddress());
     }
 
     public int getNumberOfDoors() {

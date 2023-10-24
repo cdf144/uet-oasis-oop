@@ -1,6 +1,6 @@
-package Week10.KT2_Interface;
+package Week10.BKT2_Interface;
 
-interface GeometricObject {
+public interface GeometricObject {
     double getArea();
 
     double getPerimeter();

@@ -7,6 +7,7 @@ public class Division extends BinaryExpression {
 
     /**
      * String of expression.
+     *
      * @return expression String
      */
     @Override
@@ -15,7 +16,7 @@ public class Division extends BinaryExpression {
                 + left.toString()
                 + " / "
                 + right.toString()
-        ;
+                ;
     }
 
     @Override

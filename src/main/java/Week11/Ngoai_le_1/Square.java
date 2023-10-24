@@ -9,6 +9,7 @@ public class Square extends Expression {
 
     /**
      * Square expression toString method.
+     *
      * @return Square expression String
      */
     @Override
@@ -17,7 +18,7 @@ public class Square extends Expression {
                 + expression.toString()
                 + ")"
                 + " ^ 2"
-        ;
+                ;
     }
 
     @Override

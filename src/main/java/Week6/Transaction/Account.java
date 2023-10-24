@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 public class Account {
-    private double balance;
     private final ArrayList<Transaction> transactionList;
+    private double balance;
 
     /**
      * Account constructor.
@@ -13,21 +13,6 @@ public class Account {
     public Account() {
         balance = 0;
         transactionList = new ArrayList<>();
-    }
-
-    /**
-     * Deposit an amount to account balance and add to transaction list.
-     *
-     * @param amount amount to deposit
-     */
-    private void deposit(double amount) {
-        if (amount <= 0) {
-            System.out.println("So tien ban nap vao khong hop le!");
-        } else {
-            this.balance += amount;
-            Transaction transaction = new Transaction("deposit", amount, this.balance);
-            transactionList.add(transaction);
-        }
     }
 
     public double getBalance() {
@@ -44,6 +29,21 @@ public class Account {
 
     public ArrayList<Transaction> getTransactionList() {
         return transactionList;
+    }
+
+    /**
+     * Deposit an amount to account balance and add to transaction list.
+     *
+     * @param amount amount to deposit
+     */
+    private void deposit(double amount) {
+        if (amount <= 0) {
+            System.out.println("So tien ban nap vao khong hop le!");
+        } else {
+            this.balance += amount;
+            Transaction transaction = new Transaction("deposit", amount, this.balance);
+            transactionList.add(transaction);
+        }
     }
 
     /**
