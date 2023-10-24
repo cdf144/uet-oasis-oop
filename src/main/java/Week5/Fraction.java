@@ -1,33 +1,8 @@
 package Week5;
 
-import java.lang.Math;
-
 public class Fraction {
     private int numerator;
     private int denominator;
-
-    public int getNumerator() {
-        return numerator;
-    }
-
-    public void setNumerator(int numerator) {
-        this.numerator = numerator;
-    }
-
-    public int getDenominator() {
-        return denominator;
-    }
-
-    /**
-     * Denominator setter, denominator = 0 not allowed.
-     *
-     * @param denominator denominator to set to
-     */
-    public void setDenominator(int denominator) {
-        if (denominator != 0) {
-            this.denominator = denominator;
-        }
-    }
 
     /**
      * Fraction class constructor.
@@ -42,20 +17,6 @@ public class Fraction {
         } else {
             setNumerator(numerator);
             setDenominator(1);
-        }
-    }
-
-    /**
-     * Reduce instance's fraction.
-     *
-     * @return another Fraction instance
-     */
-    public Fraction reduce() {
-        int gcd = gcd(this.numerator, this.denominator);
-        if (gcd != 0) {
-            return new Fraction(this.numerator / gcd, this.denominator / gcd);
-        } else {
-            return new Fraction(this.numerator, this.denominator);
         }
     }
 
@@ -93,6 +54,43 @@ public class Fraction {
             r = a % b;
         }
         return Math.abs(b);
+    }
+
+    public int getNumerator() {
+        return numerator;
+    }
+
+    public void setNumerator(int numerator) {
+        this.numerator = numerator;
+    }
+
+    public int getDenominator() {
+        return denominator;
+    }
+
+    /**
+     * Denominator setter, denominator = 0 not allowed.
+     *
+     * @param denominator denominator to set to
+     */
+    public void setDenominator(int denominator) {
+        if (denominator != 0) {
+            this.denominator = denominator;
+        }
+    }
+
+    /**
+     * Reduce instance's fraction.
+     *
+     * @return another Fraction instance
+     */
+    public Fraction reduce() {
+        int gcd = gcd(this.numerator, this.denominator);
+        if (gcd != 0) {
+            return new Fraction(this.numerator / gcd, this.denominator / gcd);
+        } else {
+            return new Fraction(this.numerator, this.denominator);
+        }
     }
 
     /**

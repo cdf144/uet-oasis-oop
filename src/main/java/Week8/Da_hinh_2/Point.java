@@ -1,7 +1,5 @@
 package Week8.Da_hinh_2;
 
-import java.lang.Math;
-
 public class Point {
     private double pointX;
     private double pointY;

@@ -5,10 +5,10 @@ public class Transaction {
     public static final int TYPE_WITHDRAW_CHECKING = 1;
     public static final int TYPE_DEPOSIT_SAVINGS = 2;
     public static final int TYPE_WITHDRAW_SAVINGS = 3;
-    private int type;
-    private double amount;
-    private double initialBalance;
-    private double finalBalance;
+    private final int type;
+    private final double amount;
+    private final double initialBalance;
+    private final double finalBalance;
 
     /**
      * Transaction constructor 1.

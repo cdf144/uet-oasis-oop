@@ -1,7 +1,5 @@
 package Week5;
 
-import java.lang.Math;
-
 public class GreatestCommonDivisor {
     /**
      * Return gcd int.

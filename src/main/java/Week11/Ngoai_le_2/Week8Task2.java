@@ -10,6 +10,7 @@ public class Week8Task2 {
 
     /**
      * Method to test arithmeticEx().
+     *
      * @return either error or info String
      */
     public String arithmeticExTest() {
@@ -27,6 +28,7 @@ public class Week8Task2 {
 
     /**
      * Method to test arrayIndexOutOfBoundsEx().
+     *
      * @return either error or info String
      */
     public String arrayIndexOutOfBoundsExTest() {
@@ -44,6 +46,7 @@ public class Week8Task2 {
 
     /**
      * Method to test fileNotFoundEx().
+     *
      * @return either error or info String
      */
     public String fileNotFoundExTest() {
@@ -61,6 +64,7 @@ public class Week8Task2 {
 
     /**
      * Method to test ioEx().
+     *
      * @return either error or info String
      */
     public String ioExTest() {
@@ -78,6 +82,7 @@ public class Week8Task2 {
 
     /**
      * Method to test nullPointerEx().
+     *
      * @return either error or info String
      */
     public String nullPointerExTest() {

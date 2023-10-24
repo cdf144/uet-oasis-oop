@@ -7,7 +7,7 @@ import java.util.Objects;
 public class Customer {
     private long idNumber;
     private String fullName;
-    private List<Account> accountList;
+    private final List<Account> accountList;
 
     /**
      * Customer constructor 1.

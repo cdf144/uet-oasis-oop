@@ -1,12 +1,11 @@
 package Week6.Transaction;
 
 public class Transaction {
+    public static final String DEPOSIT = "deposit";
+    public static final String WITHDRAW = "withdraw";
     private String operation;
     private double amount;
     private double balance;
-
-    public static final String DEPOSIT = "deposit";
-    public static final String WITHDRAW = "withdraw";
 
     /**
      * Constructor of Transaction with 3 variables.

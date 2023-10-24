@@ -1,4 +1,4 @@
-package Week10.KT2_Interface;
+package Week10.BKT2_Interface;
 
 public class Circle implements GeometricObject {
     public static final double PI = 3.14;
@@ -15,6 +15,7 @@ public class Circle implements GeometricObject {
 
     /**
      * Week10.Circle constructor 2.
+     *
      * @param center circle center
      * @param radius circle radius
      */
@@ -37,6 +38,7 @@ public class Circle implements GeometricObject {
 
     /**
      * Center setter.
+     *
      * @param center center
      */
     public void setCenter(Point center) {
@@ -51,6 +53,7 @@ public class Circle implements GeometricObject {
 
     /**
      * Radius setter.
+     *
      * @param radius radius
      */
     public void setRadius(double radius) {
@@ -71,6 +74,7 @@ public class Circle implements GeometricObject {
 
     /**
      * Get info string of Week10.Circle object.
+     *
      * @return info string of Week10.Circle instance
      */
     @Override

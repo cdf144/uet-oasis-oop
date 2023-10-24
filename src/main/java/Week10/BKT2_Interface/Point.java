@@ -1,4 +1,4 @@
-package Week10.KT2_Interface;
+package Week10.BKT2_Interface;
 
 import static java.lang.Math.pow;
 import static java.lang.Math.sqrt;
@@ -17,6 +17,7 @@ public class Point {
 
     /**
      * Week10.Point constructor 2.
+     *
      * @param x X coordinate
      * @param y Y coordinate
      */
@@ -27,6 +28,7 @@ public class Point {
 
     /**
      * Week10.Point copy constructor.
+     *
      * @param point Another point to copy
      */
     public Point(Point point) {
@@ -53,6 +55,7 @@ public class Point {
     /**
      * Calculate distance between this point
      * and another point.
+     *
      * @param other Other point
      * @return distance between 2 points.
      */
@@ -60,8 +63,8 @@ public class Point {
         try {
             return sqrt(
                     pow(this.pointX - other.getPointX(), 2)
-                    +
-                    pow(this.pointY - other.getPointY(), 2)
+                            +
+                            pow(this.pointY - other.getPointY(), 2)
             );
         } catch (NullPointerException e) {
             System.out.println(e.getMessage());

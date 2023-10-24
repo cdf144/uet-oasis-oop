@@ -1,4 +1,4 @@
-package Week10.KT2_Interface;
+package Week10.BKT2_Interface;
 
 import static java.lang.Math.sqrt;
 
@@ -18,16 +18,17 @@ public class Triangle implements GeometricObject {
 
     /**
      * Week10.Triangle constructor 2.
+     *
      * @param p1 point 1
      * @param p2 point 2
      * @param p3 point 3
      */
     public Triangle(Point p1, Point p2, Point p3) throws RuntimeException {
         if (p1 == null || p2 == null || p3 == null
-            || isSamePoint(p1, p2)
-            || isSamePoint(p1, p3)
-            || isSamePoint(p2, p3)
-            || isStraight(p1, p2, p3)) {
+                || isSamePoint(p1, p2)
+                || isSamePoint(p1, p3)
+                || isSamePoint(p2, p3)
+                || isStraight(p1, p2, p3)) {
             throw new RuntimeException();
         }
         this.p1 = p1;
@@ -51,13 +52,14 @@ public class Triangle implements GeometricObject {
 
     /**
      * P1 setter.
+     *
      * @param p1 point 1
      */
     public void setP1(Point p1) {
         if (p1 != null
-            && !isSamePoint(p1, this.p2)
-            && !isSamePoint(p1, this.p3)
-            && isStraight(p1, this.p2, this.p3)) {
+                && !isSamePoint(p1, this.p2)
+                && !isSamePoint(p1, this.p3)
+                && isStraight(p1, this.p2, this.p3)) {
             this.p1 = p1;
         }
     }
@@ -68,13 +70,14 @@ public class Triangle implements GeometricObject {
 
     /**
      * P2 setter.
+     *
      * @param p2 point 2
      */
     public void setP2(Point p2) {
         if (p2 != null
-            && !isSamePoint(p2, this.p1)
-            && !isSamePoint(p2, this.p3)
-            && isStraight(this.p1, p2, this.p3)) {
+                && !isSamePoint(p2, this.p1)
+                && !isSamePoint(p2, this.p3)
+                && isStraight(this.p1, p2, this.p3)) {
             this.p2 = p2;
         }
     }
@@ -85,6 +88,7 @@ public class Triangle implements GeometricObject {
 
     /**
      * P3 setter.
+     *
      * @param p3 point 3
      */
     public void setP3(Point p3) {
@@ -99,6 +103,7 @@ public class Triangle implements GeometricObject {
     /**
      * Get area of Week10.Triangle with
      * Heron's formula.
+     *
      * @return Week10.Triangle area
      */
     @Override
@@ -109,14 +114,15 @@ public class Triangle implements GeometricObject {
         double s = (a + b + c) / 2;
         return sqrt(
                 s
-                * (s - a)
-                * (s - b)
-                * (s - c)
+                        * (s - a)
+                        * (s - b)
+                        * (s - c)
         );
     }
 
     /**
      * Get Week10.Triangle perimeter.
+     *
      * @return Week10.Triangle perimeter
      */
     @Override
@@ -129,6 +135,7 @@ public class Triangle implements GeometricObject {
 
     /**
      * Get Week10.Triangle info.
+     *
      * @return Week10.Triangle info string
      */
     @Override
