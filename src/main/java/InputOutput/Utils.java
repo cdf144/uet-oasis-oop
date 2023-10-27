@@ -1,11 +1,6 @@
 package InputOutput;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -14,6 +9,7 @@ import java.util.Objects;
 public class Utils {
     /**
      * Read String content from file.
+     *
      * @param path Path to file to be read
      * @return Content String
      * @throws IOException Thrown when FileReader throws a
@@ -35,8 +31,9 @@ public class Utils {
 
     /**
      * Write String content to file.
+     *
      * @param content String content to be written to file
-     * @param path Path to file to be written to
+     * @param path    Path to file to be written to
      * @throws IOException Thrown when FileWriter throws a
      *                     FileNotFoundException
      */
@@ -50,8 +47,9 @@ public class Utils {
 
     /**
      * Append String content to file.
+     *
      * @param content String content to be appended to file
-     * @param path Path to file to be appended to
+     * @param path    Path to file to be appended to
      * @throws IOException Thrown when FileWriter throws a
      *                     FileNotFoundException
      */
@@ -66,8 +64,9 @@ public class Utils {
 
     /**
      * Find file in folder that has the name queried.
+     *
      * @param folderPath Path String to searching folder
-     * @param fileName File name query
+     * @param fileName   File name query
      */
     public static File findFileByName(String folderPath, String fileName) {
         File searchFolder = new File(folderPath);
