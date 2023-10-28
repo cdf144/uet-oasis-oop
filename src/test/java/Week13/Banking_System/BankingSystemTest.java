@@ -27,11 +27,8 @@ public class BankingSystemTest {
             System.err.println(e.toString());
             return;
         }
-        try {
-            bank.readCustomerList(fileInputStream);
-        } catch (IOException e) {
-            System.err.println(e.toString());
-        }
+
+        bank.readCustomerList(fileInputStream);
 
         System.out.println(bank.getCustomersInfoByNameOrder());
         System.out.println();

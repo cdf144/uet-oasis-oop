@@ -32,11 +32,17 @@ public class Bank {
      *
      * @param inputStream input stream
      */
-    public void readCustomerList(InputStream inputStream) throws IOException {
+    public void readCustomerList(InputStream inputStream) {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
         String readLine;
+
         // Loop for reading Customer info
-        readLine = bufferedReader.readLine();
+        try {
+            readLine = bufferedReader.readLine();
+        } catch (IOException e) {
+            System.err.println(e.toString());
+            return;
+        }
         while (readLine != null) {
             String[] partsCustomer = readLine.split(" ");
             StringBuilder customerName = new StringBuilder();
@@ -58,7 +64,12 @@ public class Bank {
             Customer newCustomer = new Customer(customerId, customerName.toString());
 
             // Loop for reading Customer's Account(s) info
-            readLine = bufferedReader.readLine();
+            try {
+                readLine = bufferedReader.readLine();
+            } catch (IOException e) {
+                System.err.println(e.toString());
+                return;
+            }
             while (readLine != null && Character.isDigit(readLine.charAt(0))) {
                 String[] partsAccount = readLine.split(" ");
                 long accountId = Long.parseLong(partsAccount[0]);
@@ -74,11 +85,16 @@ public class Bank {
                         throw new IllegalArgumentException();
                     }
                 } catch (IllegalArgumentException e) {
-                    System.err.println(e);
+                    System.err.println(e.toString());
                     return;
                 }
 
-                readLine = bufferedReader.readLine();
+                try {
+                    readLine = bufferedReader.readLine();
+                } catch (IOException e) {
+                    System.err.println(e.toString());
+                    return;
+                }
             }
 
             // Check if Customer already exists in CustomerList
