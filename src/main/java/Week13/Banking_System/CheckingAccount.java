@@ -23,12 +23,13 @@ public class CheckingAccount extends Account {
             System.out.println(e.getMessage());
             return;
         }
+
         this.transactionList.add(new Transaction(
                 Transaction.TYPE_WITHDRAW_CHECKING,
                 amount,
                 initialBalance,
-                this.balance
-        ));
+                this.balance)
+        );
     }
 
     /**
@@ -44,11 +45,12 @@ public class CheckingAccount extends Account {
             System.out.println(e.getMessage());
             return;
         }
+
         this.transactionList.add(new Transaction(
                 Transaction.TYPE_DEPOSIT_CHECKING,
                 amount,
                 initialBalance,
-                this.balance
-        ));
+                this.balance)
+        );
     }
 }

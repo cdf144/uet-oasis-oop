@@ -23,6 +23,7 @@ public class SavingsAccount extends Account {
             System.out.println(e.getMessage());
             return;
         }
+
         try {
             if (this.balance < 5000.0) {
                 throw new InsufficientFundsException();
@@ -31,6 +32,7 @@ public class SavingsAccount extends Account {
             System.out.println(e.getMessage());
             return;
         }
+
         double initialBalance = this.balance;
         try {
             doWithdrawing(amount);
@@ -39,12 +41,13 @@ public class SavingsAccount extends Account {
             System.out.println(e.getMessage());
             return;
         }
+
         this.transactionList.add(new Transaction(
                 Transaction.TYPE_WITHDRAW_SAVINGS,
                 amount,
                 initialBalance,
-                this.balance
-        ));
+                this.balance)
+        );
     }
 
     /**
@@ -60,11 +63,12 @@ public class SavingsAccount extends Account {
             System.out.println(e.getMessage());
             return;
         }
+
         this.transactionList.add(new Transaction(
                 Transaction.TYPE_DEPOSIT_SAVINGS,
                 amount,
                 initialBalance,
-                this.balance
-        ));
+                this.balance)
+        );
     }
 }

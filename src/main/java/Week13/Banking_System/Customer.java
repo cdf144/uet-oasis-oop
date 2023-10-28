@@ -56,10 +56,11 @@ public class Customer {
      * @return Customer info string
      */
     public String getCustomerInfo() {
-        return String.format("Số CMND: %d."
-                        + " Họ tên: %s.",
+        return String.format(
+                "Số CMND: %d." + " Họ tên: %s.",
                 this.idNumber,
-                this.fullName);
+                this.fullName
+        );
     }
 
     /**
