@@ -5,6 +5,7 @@ import java.util.List;
 public class LomutoQuickSort {
     /**
      * The default sort method uses rightmost elements as pivots.
+     *
      * @param arr Array (List) to sort
      */
     public static <T extends Comparable<T>> void sort(List<T> arr, int low, int high) {
@@ -20,8 +21,9 @@ public class LomutoQuickSort {
 
     /**
      * The default partitioning method uses rightmost element as pivot.
-     * @param arr Array (List) to partition
-     * @param low lower bound of index
+     *
+     * @param arr  Array (List) to partition
+     * @param low  lower bound of index
      * @param high higher bound of index
      * @return pivot index in Array (List)
      */
@@ -41,7 +43,8 @@ public class LomutoQuickSort {
 
     /**
      * Method to swap 2 elements of an Array (List) at 2 indexes.
-     * @param arr Array (List)
+     *
+     * @param arr  Array (List)
      * @param idx1 first element index
      * @param idx2 second element index
      */

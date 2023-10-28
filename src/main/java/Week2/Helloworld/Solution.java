@@ -7,6 +7,7 @@ public class Solution {
 
     /**
      * Driver method.
+     *
      * @param args Arguments
      */
     public static void main(String[] args) {

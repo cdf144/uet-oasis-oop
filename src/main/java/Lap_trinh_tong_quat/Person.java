@@ -16,8 +16,9 @@ public class Person implements Comparable<Person> {
 
     /**
      * Person constructor 2.
-     * @param name Person name
-     * @param age Person age
+     *
+     * @param name    Person name
+     * @param age     Person age
      * @param address Person address
      */
     public Person(String name, int age, String address) {
@@ -52,6 +53,7 @@ public class Person implements Comparable<Person> {
 
     /**
      * Person compareTo method override.
+     *
      * @param o the object to be compared.
      * @return Comparison int
      */
