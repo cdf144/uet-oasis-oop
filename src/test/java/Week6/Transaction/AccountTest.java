@@ -123,10 +123,10 @@ public class AccountTest {
         account.addTransaction(50, Transaction.WITHDRAW);
 
         String expectedOutput =
-                "Giao dich 1: Nap tien $100.00. So du luc nay: $100.00." +
-                        System.lineSeparator() +
-                        "Giao dich 2: Rut tien $50.00. So du luc nay: $50.00." +
-                        System.lineSeparator();
+                "Giao dich 1: Nap tien $100.00. So du luc nay: $100.00."
+                + System.lineSeparator()
+                + "Giao dich 2: Rut tien $50.00. So du luc nay: $50.00."
+                + System.lineSeparator();
         /*
         Windows uses \r\n (CRLF) as newline character, if you set the newline
         character of expectedOutput to be just \n (LF) then the test will fail.

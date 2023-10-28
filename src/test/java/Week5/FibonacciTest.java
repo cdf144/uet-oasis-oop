@@ -1,5 +1,6 @@
 package Week5;
 
+import Week5.Fibonacci.Solution;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -8,28 +9,28 @@ public class FibonacciTest {
 
     @Test
     public void testBaseCases() {
-        assertEquals(0, Fibonacci.fibonacci(0));
-        assertEquals(1, Fibonacci.fibonacci(1));
+        assertEquals(0, Solution.fibonacci(0));
+        assertEquals(1, Solution.fibonacci(1));
     }
 
     @Test
     public void testPositiveValues() {
-        assertEquals(1, Fibonacci.fibonacci(2));
-        assertEquals(2, Fibonacci.fibonacci(3));
-        assertEquals(5, Fibonacci.fibonacci(5));
-        assertEquals(55, Fibonacci.fibonacci(10));
+        assertEquals(1, Solution.fibonacci(2));
+        assertEquals(2, Solution.fibonacci(3));
+        assertEquals(5, Solution.fibonacci(5));
+        assertEquals(55, Solution.fibonacci(10));
     }
 
     @Test
     public void testNegativeValues() {
-        assertEquals(-1, Fibonacci.fibonacci(-1));
-        assertEquals(-1, Fibonacci.fibonacci(-2));
+        assertEquals(-1, Solution.fibonacci(-1));
+        assertEquals(-1, Solution.fibonacci(-2));
     }
 
     @Test
     public void testLargeValues() {
-        assertEquals(Long.MAX_VALUE, Fibonacci.fibonacci(93));
-        assertEquals(Long.MAX_VALUE, Fibonacci.fibonacci(94));
+        assertEquals(Long.MAX_VALUE, Solution.fibonacci(93));
+        assertEquals(Long.MAX_VALUE, Solution.fibonacci(94));
     }
 
     @Test
@@ -42,7 +43,7 @@ public class FibonacciTest {
                 "102334155 165580141 267914296 433494437 701408733 1134903170 ";
         StringBuilder actualOutput = new StringBuilder();
         for (int i = 0; i <= n; i++) {
-            actualOutput.append(Fibonacci.fibonacci(i)).append(" ");
+            actualOutput.append(Solution.fibonacci(i)).append(" ");
         }
         assertEquals(expectedOutput, actualOutput.toString());
     }

@@ -72,11 +72,11 @@ public class Rectangle extends Shape {
      */
     @Override
     public String toString() {
-        return String.format("Rectangle[width=%.1f,length=%.1f,color=%s,filled=%s]",
+        return String.format(
+                "Rectangle[width=%.1f,length=%.1f,color=%s,filled=%s]",
                 this.width,
                 this.length,
-                (Objects.equals(this.color, "")
-                        ? "null" : this.color),
+                (Objects.equals(this.color, "") ? "null" : this.color),
                 this.filled
         );
     }

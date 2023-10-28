@@ -1,6 +1,6 @@
-package Week5;
+package Week5.Phan_so;
 
-public class Fraction {
+public class Solution {
     private int numerator;
     private int denominator;
 
@@ -10,7 +10,7 @@ public class Fraction {
      * @param numerator   set numerator
      * @param denominator set denominator
      */
-    public Fraction(int numerator, int denominator) {
+    public Solution(int numerator, int denominator) {
         if (denominator != 0) {
             setNumerator(numerator);
             setDenominator(denominator);
@@ -30,23 +30,15 @@ public class Fraction {
         if (a == 0) {
             return b;
         }
-        if (b == 0) {
+        if (b == 0 || a == b) {
             return a;
-        }
-        if (a == b) {
-            return a;
-        }
-        if (a < 0) {
-            a = -a;
-        }
-        if (b < 0) {
-            b = -b;
         }
         if (a < b) {
             int tmp = a;
             a = b;
             b = tmp;
         }
+
         int r = a % b;
         while (r != 0) {
             a = b;
@@ -84,12 +76,12 @@ public class Fraction {
      *
      * @return another Fraction instance
      */
-    public Fraction reduce() {
-        int gcd = gcd(this.numerator, this.denominator);
+    public Solution reduce() {
+        int gcd = gcd(numerator, denominator);
         if (gcd != 0) {
-            return new Fraction(this.numerator / gcd, this.denominator / gcd);
+            return new Solution(numerator / gcd, denominator / gcd);
         } else {
-            return new Fraction(this.numerator, this.denominator);
+            return new Solution(numerator, denominator);
         }
     }
 
@@ -99,7 +91,7 @@ public class Fraction {
      * @param fraction another fraction
      * @return another Fraction instance
      */
-    public Fraction add(Fraction fraction) {
+    public Solution add(Solution fraction) {
         if (fraction.getDenominator() != 0) {
             this.numerator = (this.numerator * fraction.getDenominator())
                     + (fraction.getNumerator() * this.denominator);
@@ -114,7 +106,7 @@ public class Fraction {
      * @param fraction another fraction
      * @return another Fraction instance
      */
-    public Fraction subtract(Fraction fraction) {
+    public Solution subtract(Solution fraction) {
         if (fraction.getDenominator() != 0) {
             this.numerator = (this.numerator * fraction.getDenominator())
                     - (fraction.getNumerator() * this.denominator);
@@ -129,7 +121,7 @@ public class Fraction {
      * @param fraction another fraction
      * @return another Fraction instance
      */
-    public Fraction multiply(Fraction fraction) {
+    public Solution multiply(Solution fraction) {
         if (fraction.getDenominator() != 0) {
             this.numerator = this.numerator * fraction.getNumerator();
             this.denominator = this.denominator * fraction.getDenominator();
@@ -143,7 +135,7 @@ public class Fraction {
      * @param fraction another fraction
      * @return another Fraction instance
      */
-    public Fraction divide(Fraction fraction) {
+    public Solution divide(Solution fraction) {
         if (fraction.getDenominator() != 0) {
             this.numerator = this.numerator * fraction.getDenominator();
             this.denominator = this.denominator * fraction.getNumerator();
@@ -157,8 +149,8 @@ public class Fraction {
      * @param obj another object that's possibly a fraction
      */
     public boolean equals(Object obj) {
-        if (obj instanceof Fraction) {
-            Fraction other = (Fraction) obj;
+        if (obj instanceof Solution) {
+            Solution other = (Solution) obj;
 
             other = other.reduce();
             return other.getNumerator() == this.reduce().getNumerator()

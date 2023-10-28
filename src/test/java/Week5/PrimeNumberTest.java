@@ -1,5 +1,6 @@
 package Week5;
 
+import Week5.So_nguyen_to.Solution;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -10,30 +11,30 @@ public class PrimeNumberTest {
 
     @Test
     public void testIsPrimePositive() {
-        assertTrue(PrimeNumber.isPrime(2));
-        assertTrue(PrimeNumber.isPrime(3));
-        assertTrue(PrimeNumber.isPrime(5));
-        assertTrue(PrimeNumber.isPrime(7));
-        assertTrue(PrimeNumber.isPrime(11));
+        assertTrue(Solution.isPrime(2));
+        assertTrue(Solution.isPrime(3));
+        assertTrue(Solution.isPrime(5));
+        assertTrue(Solution.isPrime(7));
+        assertTrue(Solution.isPrime(11));
     }
 
     @Test
     public void testIsPrimeNegative() {
-        assertFalse(PrimeNumber.isPrime(-1));
-        assertFalse(PrimeNumber.isPrime(-2));
-        assertFalse(PrimeNumber.isPrime(-3));
-        assertFalse(PrimeNumber.isPrime(-5));
-        assertFalse(PrimeNumber.isPrime(-7));
+        assertFalse(Solution.isPrime(-1));
+        assertFalse(Solution.isPrime(-2));
+        assertFalse(Solution.isPrime(-3));
+        assertFalse(Solution.isPrime(-5));
+        assertFalse(Solution.isPrime(-7));
     }
 
     @Test
     public void testIsPrimeZero() {
-        assertFalse(PrimeNumber.isPrime(0));
+        assertFalse(Solution.isPrime(0));
     }
 
     @Test
     public void testIsPrimeOne() {
-        assertFalse(PrimeNumber.isPrime(1));
+        assertFalse(Solution.isPrime(1));
     }
 
     @Test
@@ -59,7 +60,7 @@ public class PrimeNumberTest {
         for (int i = 0; i <= n; i++) {
             actualOutput.append(i)
                     .append(" : ")
-                    .append(PrimeNumber.isPrime(i))
+                    .append(Solution.isPrime(i))
                     .append("\n");
         }
 

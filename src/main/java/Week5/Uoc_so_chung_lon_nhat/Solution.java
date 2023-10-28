@@ -1,6 +1,6 @@
-package Week5;
+package Week5.Uoc_so_chung_lon_nhat;
 
-public class GreatestCommonDivisor {
+public class Solution {
     /**
      * Return gcd int.
      *

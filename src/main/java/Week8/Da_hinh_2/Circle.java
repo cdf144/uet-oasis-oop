@@ -96,11 +96,11 @@ public class Circle extends Shape {
      */
     @Override
     public String toString() {
-        return String.format("Week10.Circle[center=%s,radius=%.1f,color=%s,filled=%s]",
+        return String.format(
+                "Week10.Circle[center=%s,radius=%.1f,color=%s,filled=%s]",
                 this.center.toString(),
                 this.radius,
-                (Objects.equals(this.color, "")
-                        ? "null" : this.color),
+                (Objects.equals(this.color, "") ? "null" : this.color),
                 this.filled
         );
     }

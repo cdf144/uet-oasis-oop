@@ -29,10 +29,10 @@ public class Circle {
         x += xSpeed;
         y += ySpeed;
 
-        if (x - radius <= 0 || x + radius >= panelWidth - 15) {
+        if (x - radius <= 0 || x + radius >= panelWidth) {
             xSpeed = -xSpeed;
         }
-        if (y - radius <= 0 || y + radius >= panelHeight - 40) {
+        if (y - radius <= 0 || y + radius >= panelHeight) {
             ySpeed = -ySpeed;
         }
     }

@@ -51,9 +51,9 @@ public abstract class Shape {
      * @return Shape string
      */
     public String toString() {
-        return String.format("Shape[color=%s,filled=%s]",
-                (Objects.equals(this.color, "")
-                        ? "null" : this.color),
+        return String.format(
+                "Shape[color=%s,filled=%s]",
+                (Objects.equals(this.color, "") ? "null" : this.color),
                 this.filled
         );
     }

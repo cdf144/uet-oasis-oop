@@ -56,10 +56,10 @@ public class Square extends Rectangle {
      */
     @Override
     public String toString() {
-        return String.format("Square[side=%.1f,color=%s,filled=%s]",
+        return String.format(
+                "Square[side=%.1f,color=%s,filled=%s]",
                 this.width,
-                (Objects.equals(this.color, "")
-                        ? "null" : this.color),
+                (Objects.equals(this.color, "") ? "null" : this.color),
                 this.filled
         );
     }

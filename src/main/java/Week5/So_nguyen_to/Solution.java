@@ -1,8 +1,8 @@
-package Week5;
+package Week5.So_nguyen_to;
 
 import java.util.stream.IntStream;
 
-public class PrimeNumber {
+public class Solution {
     /**
      * Return true if n is prime, false if not.
      *

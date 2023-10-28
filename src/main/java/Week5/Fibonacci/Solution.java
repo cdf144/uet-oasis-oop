@@ -1,6 +1,6 @@
-package Week5;
+package Week5.Fibonacci;
 
-public class Fibonacci {
+public class Solution {
     /**
      * Return nth Fibonacci number.
      *

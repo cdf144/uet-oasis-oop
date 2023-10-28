@@ -101,7 +101,8 @@ public class Rectangle extends Shape {
      */
     @Override
     public String toString() {
-        return String.format("Rectangle[topLeft=%s,width=%.1f,length=%.1f,color=%s,filled=%s]",
+        return String.format(
+                "Rectangle[topLeft=%s,width=%.1f,length=%.1f,color=%s,filled=%s]",
                 this.topLeft.toString(),
                 this.width,
                 this.length,

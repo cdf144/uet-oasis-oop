@@ -83,7 +83,8 @@ public class Point {
      */
     @Override
     public String toString() {
-        return String.format("(%.1f,%.1f)",
+        return String.format(
+                "(%.1f,%.1f)",
                 this.pointX,
                 this.pointY
         );
