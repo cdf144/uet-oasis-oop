@@ -36,13 +36,23 @@ public class Bank {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
         String readLine;
 
-        // Loop for reading Customer info
+        /*
+         * Each readLine() call is put into a try-catch block for IOExceptions
+         * instead of adding "throws IOException" to method signature because
+         * the tests weren't made to expect that readCustomerList would throw
+         * any exception. This makes the method code moderately more lengthy
+         * but enables it to pass all tests.
+         * Alternatively you can use Scanner and Scanner.hasNextLine(), which
+         * throws no exception in the while loop and thus does not have to be
+         * taken care of.
+         */
         try {
             readLine = bufferedReader.readLine();
         } catch (IOException e) {
             System.err.println(e.toString());
             return;
         }
+        // Loop for reading Customer info
         while (readLine != null) {
             String[] partsCustomer = readLine.split(" ");
             StringBuilder customerName = new StringBuilder();
@@ -72,6 +82,7 @@ public class Bank {
             }
             while (readLine != null && Character.isDigit(readLine.charAt(0))) {
                 String[] partsAccount = readLine.split(" ");
+
                 long accountId = Long.parseLong(partsAccount[0]);
                 String operation = partsAccount[1];
                 double balance = Double.parseDouble(partsAccount[2]);

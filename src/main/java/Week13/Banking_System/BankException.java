@@ -1,6 +1,6 @@
 package Week13.Banking_System;
 
-public class BankException extends java.lang.Exception {
+public class BankException extends Exception {
     public BankException() {
         super();
     }
