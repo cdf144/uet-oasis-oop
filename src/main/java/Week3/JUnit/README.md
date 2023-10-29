@@ -1,7 +1,6 @@
 ### Đề bài :
 
-Viết các phương thức static sau, sử dụng JUnit viết từng phương thức ít nhất 5 bộ test để kiểm tra tính đúng đắn (sử dụng phương thức assertEquals). 
-Sử dụng code mẫu tại: https://github.com/oasis-homework/Week4
+Viết các phương thức static sau, sử dụng JUnit viết từng phương thức ít nhất 5 bộ test để kiểm tra tính đúng đắn (sử dụng phương thức assertEquals). Sử dụng code mẫu tại: https://github.com/oasis-homework/Week4
 
 a. Tìm giá trị lớn nhất của hai số nguyên, giá trị trả về của phương thức là số lớn nhất (phương thức `max2Int`)
 
@@ -19,17 +18,11 @@ In ra kết quả đánh giá chỉ số BMI dựa theo công thức trên:
 
 Hướng dẫn:
 
-Có nhiều cách khác nhau để thêm thư viện JUnit vào project, để từ đó có thể sử dụng JUnit viết các test case. 
-Hướng dẫn này giới thiệu cách sử dụng Maven để thêm thư viện JUnit vào project.
+Có nhiều cách khác nhau để thêm thư viện JUnit vào project, để từ đó có thể sử dụng JUnit viết các test case. Hướng dẫn này giới thiệu cách sử dụng Maven để thêm thư viện JUnit vào project.
 
-Đầu tiên giới thiệu qua về Maven, đây là một chương trình quản lý project cho phép developers có thể quản lý về version, các dependencies (các thư viện sử dụng trong dự án), quản lý build, tự động download javadoc & source,… 
-bạn hoàn toàn có thể download thủ công các thư viện (.jar), ví dụ như JUnit, sau đó thêm thủ công vào project. 
-Tuy nhiên, khi số lượng các thư viện dependencies lớn, công việc import thủ công là rất vất vả, chưa kể đến việc version của các thư viện có thể conflict với nhau. 
-Maven có thể giải quyết vấn đề này.
+Đầu tiên giới thiệu qua về Maven, đây là một chương trình quản lý project cho phép developers có thể quản lý về version, các dependencies (các thư viện sử dụng trong dự án), quản lý build, tự động download javadoc & source,… bạn hoàn toàn có thể download thủ công các thư viện (.jar), ví dụ như JUnit, sau đó thêm thủ công vào project. Tuy nhiên, khi số lượng các thư viện dependencies lớn, công việc import thủ công là rất vất vả, chưa kể đến việc version của các thư viện có thể conflict với nhau. Maven có thể giải quyết vấn đề này.
 
-Để sử dụng Maven trong IntelliJ, có 2 cách. 
-Cách 1, trong quá trình tạo mới project (_File -> New -> Project_), bạn chọn đúng kiểu project là Maven trong cửa sổ hiện ra. 
-Cách 2, từ một project Java thông thường như các tuần trước, IntelliJ cho phép bạn convert sang Maven project bằng cách _right click project -> Add Framework Support_
+Để sử dụng Maven trong IntelliJ, có 2 cách. Cách 1, trong quá trình tạo mới project (_File -> New -> Project_), bạn chọn đúng kiểu project là Maven trong cửa sổ hiện ra. Cách 2, từ một project Java thông thường như các tuần trước, IntelliJ cho phép bạn convert sang Maven project bằng cách _right click project -> Add Framework Support_
 
 ![w4_anh1.png](w4_anh1.png)
 
@@ -74,8 +67,7 @@ Cuối cùng, click vào Import Changes được hiện ra ở cuối sau khi b�
 
 ![w4_anh6.png](w4_anh6.png)
 
-Chú ý: Ở các phiên bản Maven cũ, khi các bạn thực hiện theo hướng dẫn sẽ báo lỗi `501 HTTPS Required` do Maven Central đã bắt buộc client sử dụng giao thức https để giao tiếp. 
-Nếu các bạn gặp lỗi này, hãy thêm những dòng dưới đây vào tệp `pom.xml` ở trong thẻ `<project></project>`.
+Chú ý: Ở các phiên bản Maven cũ, khi các bạn thực hiện theo hướng dẫn sẽ báo lỗi `501 HTTPS Required` do Maven Central đã bắt buộc client sử dụng giao thức https để giao tiếp.  Nếu các bạn gặp lỗi này, hãy thêm những dòng dưới đây vào tệp `pom.xml` ở trong thẻ `<project></project>`.
 
 ```xml
 <pluginRepositories>
