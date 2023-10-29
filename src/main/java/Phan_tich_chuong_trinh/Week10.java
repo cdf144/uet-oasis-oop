@@ -90,7 +90,9 @@ public class Week10 {
                     paramTypes.append(paramType).append(",");
                 }
                 if (paramTypes.charAt(paramTypes.length() - 1) == ',') {
-                    paramTypes = new StringBuilder(paramTypes.substring(0, paramTypes.length() - 1));
+                    paramTypes = new StringBuilder(
+                            paramTypes.substring(0, paramTypes.length() - 1)
+                    );
                 }
             }
             String function = methodName + "(" + paramTypes.toString() + ")";
