@@ -1,4 +1,4 @@
-package Co_vua_2;
+package Co_vua_1_BKT;
 
 public abstract class Piece {
     private int coordinatesX;
