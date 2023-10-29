@@ -69,7 +69,6 @@ public class Week10 {
      */
     public static List<String> getAllFunctions(String fileContent) {
         List<String> importList = getImportList(fileContent);
-
         List<String> allFunctions = new ArrayList<>();
 
         Matcher matcher = METHOD_PATTERN.matcher(fileContent);
@@ -77,6 +76,7 @@ public class Week10 {
             String methodName = matcher.group(3); // (\\w+)
             String[] params = matcher.group(4).split(", "); // ([^)]*)
             StringBuilder paramTypes = new StringBuilder();
+            String function;
 
             if (!params[0].isEmpty()) {
                 for (String param : params) {
@@ -89,13 +89,15 @@ public class Week10 {
                     }
                     paramTypes.append(paramType).append(",");
                 }
-                if (paramTypes.charAt(paramTypes.length() - 1) == ',') {
-                    paramTypes = new StringBuilder(
-                            paramTypes.substring(0, paramTypes.length() - 1)
-                    );
-                }
+
+                function = methodName
+                        + "("
+                        + paramTypes.substring(0, paramTypes.length() - 1)
+                        + ")";
+            } else {
+                function = methodName + "()";
             }
-            String function = methodName + "(" + paramTypes.toString() + ")";
+
             allFunctions.add(function);
         }
 
