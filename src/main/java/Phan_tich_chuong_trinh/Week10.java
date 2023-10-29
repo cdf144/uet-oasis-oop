@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -28,16 +27,6 @@ public class Week10 {
     );
 
     /*
-     * Matches any line that starts with an optional public keyword followed by one or more
-     * whitespace characters, followed by the keywords class, interface, or enum, followed by
-     * one or more whitespace characters, followed by the name of the class, interface, or enum.
-     */
-    private static final Pattern CLASS_PATTERN = Pattern.compile(
-            "^\\s*(public\\s+)?(class|interface|enum)\\s+(\\w+)\\s*",
-            Pattern.MULTILINE
-    );
-
-    /*
      * Matches any line that starts with one or more of the keywords, separated by one or more
      * whitespace characters, followed by the return type of the method, followed by one or more
      * whitespace characters, followed by the name of the method, followed by zero or more
@@ -55,6 +44,7 @@ public class Week10 {
 
     /**
      * Method to get a list of imports.
+     *
      * @param fileContent File content String
      * @return List of imports
      */
@@ -68,61 +58,17 @@ public class Week10 {
             );
         }
 
-        for (String imports : importList) {
-            System.out.println(imports);
-        }
-
         return importList;
     }
 
     /**
-     * Method to get a list of classes/interfaces/enums.
-     * @param fileContent File content String
-     * @return List of classes/interfaces/enums
+     * Get a list of functions (methods) and its parameters' type from a Java source file.
+     *
+     * @param fileContent Java source file's content
+     * @return List of functions (methods) and its parameters' type
      */
-    public static List<String> getClassList(String fileContent) {
-        List<String> classList = new ArrayList<>();
-
-        Matcher matcher = CLASS_PATTERN.matcher(fileContent);
-        while (matcher.find()) {
-            classList.add(
-                    fileContent.substring(matcher.start(), matcher.end()).trim()
-            );
-        }
-
-        for (String classes : classList) {
-            System.out.println(classes);
-        }
-
-        return classList;
-    }
-
-    /**
-     * Method to get a list of methods.
-     * @param fileContent File content String
-     * @return List of methods
-     */
-    public static List<String> getMethodList(String fileContent) {
-        List<String> methodList = new ArrayList<>();
-
-        Matcher matcher = METHOD_PATTERN.matcher(fileContent);
-        while (matcher.find()) {
-            methodList.add(
-                    fileContent.substring(matcher.start(), matcher.end()).trim()
-            );
-        }
-
-        for (String methods : methodList) {
-            System.out.println(methods);
-        }
-
-        return methodList;
-    }
-
     public static List<String> getAllFunctions(String fileContent) {
         List<String> importList = getImportList(fileContent);
-        List<String> classList = getClassList(fileContent);
-        List<String> methodList = getMethodList(fileContent);
 
         List<String> allFunctions = new ArrayList<>();
 
