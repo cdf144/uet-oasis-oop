@@ -67,7 +67,7 @@ Cuối cùng, click vào Import Changes được hiện ra ở cuối sau khi b�
 
 ![w4_anh6.png](w4_anh6.png)
 
-Chú ý: Ở các phiên bản Maven cũ, khi các bạn thực hiện theo hướng dẫn sẽ báo lỗi `501 HTTPS Required` do Maven Central đã bắt buộc client sử dụng giao thức https để giao tiếp.  Nếu các bạn gặp lỗi này, hãy thêm những dòng dưới đây vào tệp `pom.xml` ở trong thẻ `<project></project>`.
+Chú ý: Ở các phiên bản Maven cũ, khi các bạn thực hiện theo hướng dẫn sẽ báo lỗi `501 HTTPS Required` do Maven Central đã bắt buộc client sử dụng giao thức https để giao tiếp. Nếu các bạn gặp lỗi này, hãy thêm những dòng dưới đây vào tệp `pom.xml` ở trong thẻ `<project></project>`.
 
 ```xml
 <pluginRepositories>
@@ -100,7 +100,7 @@ Chú ý: Ở các phiên bản Maven cũ, khi các bạn thực hiện theo hư�
 </repositories>
 ```
 
-Tới đây, bạn có thể thêm các file test (đặt ở _src -> test -> java_) và hoàn thiện các yêu cầu còn lại. Chú ý, với tuần này, bạn cần tuân thủ theo code mẫu (link ở trên), trong đó mã nguồn cài đặt gồm 3 hàm static đặt trong class Week4; mã nguồn test gồm 5x3=15 hàm đặt trong class Week4Test, sử dụng JUnit4, và không thay đổi cấu trúc trong file test này (tên hàm, annotation,…) , ngược lại submit sẽ báo sai.
+Tới đây, bạn có thể thêm các file test (đặt ở _src -> test -> java_) và hoàn thiện các yêu cầu còn lại. Chú ý, với tuần này, bạn cần tuân thủ theo code mẫu (link ở trên), trong đó mã nguồn cài đặt gồm 3 hàm static đặt trong class Week4; mã nguồn test gồm 5x3=15 hàm đặt trong class Week4Test, sử dụng JUnit4, và không thay đổi cấu trúc trong file test này (tên hàm, annotation,…), ngược lại submit sẽ báo sai.
 
 ### Định dạng đầu vào :
 

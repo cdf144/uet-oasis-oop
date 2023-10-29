@@ -6,7 +6,7 @@
     - Thuộc tính tên loại giao dịch `operation` có kiểu là `String`
     - Thuộc tính số tiền giao dịch `amount` có kiểu là `double`
     - Thuộc tính số dư còn lại trong tài khoản `balance` có kiểu là `double`
-- Khai báo hai biến hằng có sử dụng `static` ,`final`: DEPOSIT , WITHDRAW đều có kiểu là `String` và mức truy nhập là **public**.
+- Khai báo hai biến hằng có sử dụng `static` ,`final`: DEPOSIT, WITHDRAW đều có kiểu là `String` và mức truy nhập là **public**.
 - Thêm phương thức khởi tạo có ba tham số (operation, amount, balance)
 - Thêm phương thức **getter/setter** cho các thuộc tính.
 
