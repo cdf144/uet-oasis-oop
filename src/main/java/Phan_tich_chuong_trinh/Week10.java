@@ -18,7 +18,7 @@ public class Week10 {
 
     /*
      * Matches any line that starts with 'import', followed by an optional 'static', followed
-     * by 1 or more word charactersor dots, optionally followed by a dot and an asterisk
+     * by 1 or more word characters or dots, optionally followed by a dot and an asterisk
      * (import all) and ends with semicolon, all separated by 1 or more whitespace characters.
      */
     private static final Pattern IMPORT_PATTERN = Pattern.compile(
@@ -80,7 +80,7 @@ public class Week10 {
 
             if (!params[0].isEmpty()) {
                 for (String param : params) {
-                    String paramType = param.split(" ")[0];
+                    String paramType = param.trim().split(" ")[0];
                     for (String imported : importList) {
                         if (imported.contains(paramType) && !imported.contains("static")) {
                             // Without 'import' and ending ';'

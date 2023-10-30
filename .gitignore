@@ -3,16 +3,13 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 *.class
-/.idea/
-/src/main/java/DSA
-/src/main/java/edu/princeton/cs/algs4
-/src/test/java/DSA/Sorting/
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
 .idea/jarRepositories.xml
 .idea/compiler.xml
 .idea/libraries/
+.idea/
 *.iws
 *.iml
 *.ipr
