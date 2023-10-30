@@ -28,7 +28,8 @@ public class Triangle implements GeometricObject {
                 || isSamePoint(p1, p2)
                 || isSamePoint(p1, p3)
                 || isSamePoint(p2, p3)
-                || isStraight(p1, p2, p3)) {
+                || isStraight(p1, p2, p3)
+        ) {
             throw new RuntimeException();
         }
         this.p1 = p1;
@@ -59,7 +60,8 @@ public class Triangle implements GeometricObject {
         if (p1 != null
                 && !isSamePoint(p1, this.p2)
                 && !isSamePoint(p1, this.p3)
-                && isStraight(p1, this.p2, this.p3)) {
+                && isStraight(p1, this.p2, this.p3)
+        ) {
             this.p1 = p1;
         }
     }
@@ -77,7 +79,8 @@ public class Triangle implements GeometricObject {
         if (p2 != null
                 && !isSamePoint(p2, this.p1)
                 && !isSamePoint(p2, this.p3)
-                && isStraight(this.p1, p2, this.p3)) {
+                && isStraight(this.p1, p2, this.p3)
+        ) {
             this.p2 = p2;
         }
     }
@@ -95,7 +98,8 @@ public class Triangle implements GeometricObject {
         if (p3 != null
                 && !isSamePoint(p3, this.p1)
                 && !isSamePoint(p3, this.p2)
-                && isStraight(this.p1, this.p2, p3)) {
+                && isStraight(this.p1, this.p2, p3)
+        ) {
             this.p3 = p3;
         }
     }
@@ -112,12 +116,7 @@ public class Triangle implements GeometricObject {
         double b = this.p2.distance(this.p3);
         double c = this.p1.distance(this.p3);
         double s = (a + b + c) / 2;
-        return sqrt(
-                s
-                        * (s - a)
-                        * (s - b)
-                        * (s - c)
-        );
+        return sqrt(s * (s - a) * (s - b) * (s - c));
     }
 
     /**

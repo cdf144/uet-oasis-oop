@@ -1,11 +1,6 @@
 package InputOutput;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -75,7 +70,9 @@ public class Utils {
      */
     public static File findFileByName(String folderPath, String fileName) {
         File searchFolder = new File(folderPath);
-        List<File> filesInFolder = new ArrayList<>(Arrays.asList(Objects.requireNonNull(searchFolder.listFiles())));
+        List<File> filesInFolder = new ArrayList<>(
+                Arrays.asList(Objects.requireNonNull(searchFolder.listFiles()))
+        );
         if (!filesInFolder.isEmpty()) {
             for (File file : filesInFolder) {
                 if (file.getName().equals(fileName)) {

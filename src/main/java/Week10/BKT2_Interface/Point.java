@@ -63,8 +63,7 @@ public class Point {
         try {
             return sqrt(
                     pow(this.pointX - other.getPointX(), 2)
-                            +
-                            pow(this.pointY - other.getPointY(), 2)
+                    + pow(this.pointY - other.getPointY(), 2)
             );
         } catch (NullPointerException e) {
             System.out.println(e.getMessage());
