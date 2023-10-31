@@ -1,22 +1,21 @@
 package Co_vua_1_BKT;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Board {
     public static final int WIDTH = 8;
     public static final int HEIGHT = 8;
-    private List<Piece> pieces;
+    private ArrayList<Piece> pieces;
 
     public Board() {
         pieces = new ArrayList<>();
     }
 
-    public List<Piece> getPieces() {
+    public ArrayList<Piece> getPieces() {
         return pieces;
     }
 
-    public void setPieces(List<Piece> pieces) {
+    public void setPieces(ArrayList<Piece> pieces) {
         this.pieces = pieces;
     }
 
@@ -50,14 +49,12 @@ public class Board {
      * @param y Y coordinate
      */
     public void removeAt(int x, int y) {
-        if (Piece.checkValidCoordinates(x, y)) {
-            for (Piece piece : pieces) {
-                if (piece.getCoordinatesX() == x
-                        && piece.getCoordinatesY() == y
-                ) {
-                    pieces.remove(piece);
-                    break;
-                }
+        for (Piece piece : pieces) {
+            if (piece.getCoordinatesX() == x
+                    && piece.getCoordinatesY() == y
+            ) {
+                pieces.remove(piece);
+                break;
             }
         }
     }
@@ -70,13 +67,11 @@ public class Board {
      * @return Piece at queried coordinate
      */
     public Piece getAt(int x, int y) {
-        if (Piece.checkValidCoordinates(x, y)) {
-            for (Piece piece : pieces) {
-                if (piece.getCoordinatesX() == x
-                        && piece.getCoordinatesY() == y
-                ) {
-                    return piece;
-                }
+        for (Piece piece : pieces) {
+            if (piece.getCoordinatesX() == x
+                    && piece.getCoordinatesY() == y
+            ) {
+                return piece;
             }
         }
         return null;

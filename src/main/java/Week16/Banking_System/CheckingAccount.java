@@ -1,38 +1,20 @@
-package Week13.Banking_System;
+package Week16.Banking_System;
 
-public class SavingsAccount extends Account {
-    public SavingsAccount() {
+public class CheckingAccount extends Account {
+    public CheckingAccount() {
         super();
     }
 
-    public SavingsAccount(long accountNumber, double balance) {
+    public CheckingAccount(long accountNumber, double balance) {
         super(accountNumber, balance);
     }
 
     /**
-     * Withdraw from savings account.
+     * Withdraw from checking account.
      *
      * @param amount amount
      */
     public void withdraw(double amount) {
-        try {
-            if (amount > 1000.0) {
-                throw new IllegalArgumentException("Illegal amount");
-            }
-        } catch (IllegalArgumentException e) {
-            System.out.println(e.getMessage());
-            return;
-        }
-
-        try {
-            if (this.balance < 5000.0) {
-                throw new InsufficientFundsException();
-            }
-        } catch (InsufficientFundsException e) {
-            System.out.println(e.getMessage());
-            return;
-        }
-
         double initialBalance = this.balance;
         try {
             doWithdrawing(amount);
@@ -43,7 +25,7 @@ public class SavingsAccount extends Account {
         }
 
         this.transactionList.add(new Transaction(
-                Transaction.TYPE_WITHDRAW_SAVINGS,
+                Transaction.TYPE_WITHDRAW_CHECKING,
                 amount,
                 initialBalance,
                 this.balance)
@@ -51,7 +33,7 @@ public class SavingsAccount extends Account {
     }
 
     /**
-     * Deposit from savings account.
+     * Deposit from checking account.
      *
      * @param amount amount
      */
@@ -65,7 +47,7 @@ public class SavingsAccount extends Account {
         }
 
         this.transactionList.add(new Transaction(
-                Transaction.TYPE_DEPOSIT_SAVINGS,
+                Transaction.TYPE_DEPOSIT_CHECKING,
                 amount,
                 initialBalance,
                 this.balance)

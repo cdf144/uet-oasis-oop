@@ -2,8 +2,6 @@ package Co_vua_1_BKT;
 
 import java.util.Objects;
 
-import static java.lang.Math.abs;
-
 public class Bishop extends Piece {
     /**
      * Bishop constructor 1. X, Y coordinate must be valid.
@@ -134,7 +132,8 @@ public class Bishop extends Piece {
      * @return If Bishop move is invalid or not
      */
     public boolean isInvalidBishopMove(int x, int y) {
-        return (abs(this.getCoordinatesX() - x) != abs(this.getCoordinatesY() - y)) // not diagonal
+        return (Math.abs(this.getCoordinatesX() - x)
+                != Math.abs(this.getCoordinatesY() - y)) // not diagonal
                 || (this.getCoordinatesX() == x && this.getCoordinatesY() == y); // no move
     }
 }

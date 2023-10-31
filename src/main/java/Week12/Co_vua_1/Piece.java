@@ -1,4 +1,4 @@
-package Co_vua_1;
+package Week12.Co_vua_1;
 
 public abstract class Piece {
     private int coordinatesX;

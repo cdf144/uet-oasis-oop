@@ -1,9 +1,9 @@
-package Lap_trinh_tong_quat;
+package Week12.Lap_trinh_tong_quat;
 
 public class Person implements Comparable<Person> {
-    private String name;
-    private int age;
-    private String address;
+    protected String name;
+    protected int age;
+    protected String address;
 
     /**
      * Person constructor 1.

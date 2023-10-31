@@ -36,7 +36,7 @@ public class Week10 {
      * This RegEx also skips all constructors (constructors don't have return types)
      */
     private static final Pattern METHOD_PATTERN = Pattern.compile(
-            "^\\s*((abstract|public|private|protected|static|final)\\s+)+"
+            "^\\s*((abstract|public|private|protected)\\s+)+static\\s+(final\\s+)*"
                     + "[\\w<>\\[\\]]+\\s+(\\w+)\\s*"
                     + "\\(([^)]*)\\)",
             Pattern.MULTILINE
@@ -73,8 +73,8 @@ public class Week10 {
 
         Matcher matcher = METHOD_PATTERN.matcher(fileContent);
         while (matcher.find()) {
-            String methodName = matcher.group(3); // (\\w+)
-            String[] params = matcher.group(4).split(", "); // ([^)]*)
+            String methodName = matcher.group(4); // (\\w+)
+            String[] params = matcher.group(5).split(", "); // ([^)]*)
             StringBuilder paramTypes = new StringBuilder();
             String function;
 

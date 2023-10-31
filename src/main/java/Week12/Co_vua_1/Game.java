@@ -1,11 +1,11 @@
-package Co_vua_1;
+package Week12.Co_vua_1;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Game {
     private Board board;
-    private List<Move> moveHistory;
+    private ArrayList<Move> moveHistory;
 
     /**
      * Game constructor 1.
@@ -75,7 +75,7 @@ public class Game {
         return moveHistory;
     }
 
-    public void setMoveHistory(List<Move> moveHistory) {
+    public void setMoveHistory(ArrayList<Move> moveHistory) {
         this.moveHistory = moveHistory;
     }
 }
