@@ -1,4 +1,4 @@
-package Co_vua_1_BKT;
+package Week13.Co_vua_1_BKT;
 
 import java.util.ArrayList;
 
@@ -39,16 +39,16 @@ public class Game {
             if (pieceAt == null) {
                 move = new Move(
                         piece.getCoordinatesX(),
-                        x,
                         piece.getCoordinatesY(),
+                        x,
                         y,
                         piece
                 );
             } else {
                 move = new Move(
                         piece.getCoordinatesX(),
-                        x,
                         piece.getCoordinatesY(),
+                        x,
                         y,
                         piece,
                         pieceAt

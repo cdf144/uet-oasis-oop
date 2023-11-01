@@ -1,5 +1,3 @@
-package Phan_tich_chuong_trinh;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -110,7 +108,6 @@ public class Week10 {
         String filename = "src"
                 + File.separator + "main"
                 + File.separator + "java"
-                + File.separator + "Phan_tich_chuong_trinh"
                 + File.separator + "test.txt";
         String workingDir = System.getProperty("user.dir");
         file = new File(workingDir, filename);

@@ -69,20 +69,15 @@ public class Rook extends Piece {
      */
     public boolean canMoveRookHorizontal(Board board, int x, int y) {
         int currX = this.getCoordinatesX();
-        String moveDirection = currX < x ? "Right" : "Left";
+        int dx = currX < x ? 1 : -1;
 
-        if (moveDirection.compareTo("Right") == 0) {
-            while (++currX < x) {
-                if (board.getAt(currX, y) != null) {
-                    return false;
-                }
+        currX += dx;
+        while (currX != x) {
+            if (board.getAt(currX, y) != null) {
+                return false;
             }
-        } else {
-            while (--currX > x) {
-                if (board.getAt(currX, y) != null) {
-                    return false;
-                }
-            }
+
+            currX += dx;
         }
 
         return true;
@@ -98,20 +93,15 @@ public class Rook extends Piece {
      */
     public boolean canMoveRookVertical(Board board, int x, int y) {
         int currY = this.getCoordinatesY();
-        String moveDirection = currY < y ? "Up" : "Down";
+        int dy = currY < y ? 1 : -1;
 
-        if (moveDirection.compareTo("Up") == 0) {
-            while (++currY < y) {
-                if (board.getAt(x, currY) != null) {
-                    return false;
-                }
+        currY += dy;
+        while (currY != y) {
+            if (board.getAt(x, currY) != null) {
+                return false;
             }
-        } else {
-            while (--currY > y) {
-                if (board.getAt(x, currY) != null) {
-                    return false;
-                }
-            }
+
+            currY += dy;
         }
 
         return true;

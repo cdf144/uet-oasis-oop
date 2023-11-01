@@ -1,7 +1,6 @@
 package Week12.Co_vua_1;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Board {
     public static final int WIDTH = 8;
@@ -12,7 +11,7 @@ public class Board {
         pieces = new ArrayList<>();
     }
 
-    public List<Piece> getPieces() {
+    public ArrayList<Piece> getPieces() {
         return pieces;
     }
 
@@ -30,13 +29,7 @@ public class Board {
      * @param p Piece to add
      */
     public void addPiece(Piece p) {
-        boolean existPiece = false;
-        for (Piece piece : pieces) {
-            if (piece.checkPosition(p)) {
-                existPiece = true;
-                break;
-            }
-        }
+        boolean existPiece = getAt(p.getCoordinatesX(), p.getCoordinatesY()) != null;
 
         if (!existPiece) {
             pieces.add(p);
@@ -51,14 +44,7 @@ public class Board {
      */
     public void removeAt(int x, int y) {
         if (Piece.checkValidCoordinates(x, y)) {
-            for (Piece piece : pieces) {
-                if (piece.getCoordinatesX() == x
-                        && piece.getCoordinatesY() == y
-                ) {
-                    pieces.remove(piece);
-                    break;
-                }
-            }
+            pieces.remove(getAt(x, y));
         }
     }
 
@@ -79,6 +65,7 @@ public class Board {
                 }
             }
         }
+
         return null;
     }
 }

@@ -1,4 +1,4 @@
-package Co_vua_1_BKT;
+package Week13.Co_vua_1_BKT;
 
 import java.util.ArrayList;
 
@@ -29,13 +29,7 @@ public class Board {
      * @param p Piece to add
      */
     public void addPiece(Piece p) {
-        boolean existPiece = false;
-        for (Piece piece : pieces) {
-            if (piece.checkPosition(p)) {
-                existPiece = true;
-                break;
-            }
-        }
+        boolean existPiece = getAt(p.getCoordinatesX(), p.getCoordinatesY()) != null;
 
         if (!existPiece) {
             pieces.add(p);
@@ -49,13 +43,8 @@ public class Board {
      * @param y Y coordinate
      */
     public void removeAt(int x, int y) {
-        for (Piece piece : pieces) {
-            if (piece.getCoordinatesX() == x
-                    && piece.getCoordinatesY() == y
-            ) {
-                pieces.remove(piece);
-                break;
-            }
+        if (Piece.checkValidCoordinates(x, y)) {
+            pieces.remove(getAt(x, y));
         }
     }
 
@@ -67,13 +56,16 @@ public class Board {
      * @return Piece at queried coordinate
      */
     public Piece getAt(int x, int y) {
-        for (Piece piece : pieces) {
-            if (piece.getCoordinatesX() == x
-                    && piece.getCoordinatesY() == y
-            ) {
-                return piece;
+        if (Piece.checkValidCoordinates(x, y)) {
+            for (Piece piece : pieces) {
+                if (piece.getCoordinatesX() == x
+                        && piece.getCoordinatesY() == y
+                ) {
+                    return piece;
+                }
             }
         }
+
         return null;
     }
 }

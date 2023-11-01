@@ -1,7 +1,6 @@
 package Week12.Co_vua_1;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Game {
     private Board board;
@@ -71,7 +70,7 @@ public class Game {
         this.board = board;
     }
 
-    public List<Move> getMoveHistory() {
+    public ArrayList<Move> getMoveHistory() {
         return moveHistory;
     }
 

@@ -1,9 +1,9 @@
-package Co_vua_1_BKT;
+package Week13.Co_vua_1_BKT;
 
 public class Move {
     private int startX;
-    private int endX;
     private int startY;
+    private int endX;
     private int endY;
     private Piece movedPiece;
     private Piece killedPiece;
@@ -12,15 +12,15 @@ public class Move {
      * Move constructor 1.
      *
      * @param startX     Start X
-     * @param endX       End X
      * @param startY     Start Y
+     * @param endX       End X
      * @param endY       End Y
      * @param movedPiece Moved Piece
      */
-    public Move(int startX, int endX, int startY, int endY, Piece movedPiece) {
+    public Move(int startX, int startY, int endX, int endY, Piece movedPiece) {
         this.startX = startX;
-        this.endX = endX;
         this.startY = startY;
+        this.endX = endX;
         this.endY = endY;
         this.movedPiece = movedPiece;
     }
@@ -28,27 +28,29 @@ public class Move {
     /**
      * Move constructor 2.
      *
-     * @param startX      Start X
-     * @param endX        End X
-     * @param startY      Start Y
-     * @param endY        End Y
+     * @param startX     Start X
+     * @param startY     Start Y
+     * @param endX       End X
+     * @param endY       End Y
      * @param movedPiece  Moved Piece
      * @param killedPiece Killed Piece
      */
-    public Move(int startX, int endX, int startY, int endY, Piece movedPiece, Piece killedPiece) {
+    public Move(int startX, int startY, int endX, int endY, Piece movedPiece, Piece killedPiece) {
         this.startX = startX;
-        this.endX = endX;
         this.startY = startY;
+        this.endX = endX;
         this.endY = endY;
         this.movedPiece = movedPiece;
         this.killedPiece = killedPiece;
     }
+
 
     /**
      * Move toString.
      *
      * @return String of move made
      */
+    @Override
     public String toString() {
         return movedPiece.getColor()
                 + "-"

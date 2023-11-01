@@ -1,4 +1,4 @@
-package Co_vua_1_BKT;
+package Week13.Co_vua_1_BKT;
 
 public abstract class Piece {
     private int coordinatesX;
@@ -16,7 +16,7 @@ public abstract class Piece {
             this.coordinatesX = coordinatesX;
             this.coordinatesY = coordinatesY;
         }
-        this.color = "white";
+        this.color = "";
     }
 
     /**
