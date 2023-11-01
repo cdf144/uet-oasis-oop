@@ -7,32 +7,12 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/**
- * A utility class to parse a Java file with imports, class/interface/enum declarations,
- * and methods (with or without parameters)
- */
 public class Week10 {
-    // The MULTILINE flags are used to match the start and end of each line in the input string.
-
-    /*
-     * Matches any line that starts with 'import', followed by an optional 'static', followed
-     * by 1 or more word characters or dots, optionally followed by a dot and an asterisk
-     * (import all) and ends with semicolon, all separated by 1 or more whitespace characters.
-     */
     private static final Pattern IMPORT_PATTERN = Pattern.compile(
             "^import\\s+(static\\s+)?([\\w.]+(\\.\\*)?\\s*;)$",
             Pattern.MULTILINE
     );
 
-    /*
-     * Matches any line that starts with one or more of the keywords, separated by one or more
-     * whitespace characters, followed by the return type of the method, followed by one or more
-     * whitespace characters, followed by the name of the method, followed by zero or more
-     * whitespace characters, followed by an opening parenthesis, followed by zero or more
-     * parameters separated by commas, followed by a closing parenthesis.
-     *
-     * This RegEx also skips all constructors (constructors don't have return types)
-     */
     private static final Pattern METHOD_PATTERN = Pattern.compile(
             "^\\s*((abstract|public|private|protected)\\s+)+static\\s+(final\\s+)*"
                     + "[\\w<>\\[\\]]+\\s+(\\w+)\\s*"
@@ -40,12 +20,6 @@ public class Week10 {
             Pattern.MULTILINE
     );
 
-    /**
-     * Method to get a list of imports.
-     *
-     * @param fileContent File content String
-     * @return List of imports
-     */
     public static List<String> getImportList(String fileContent) {
         List<String> importList = new ArrayList<>();
 
@@ -59,12 +33,6 @@ public class Week10 {
         return importList;
     }
 
-    /**
-     * Get a list of functions (methods) and its parameters' type from a Java source file.
-     *
-     * @param fileContent Java source file's content
-     * @return List of functions (methods) and its parameters' type
-     */
     public static List<String> getAllFunctions(String fileContent) {
         List<String> importList = getImportList(fileContent);
         List<String> allFunctions = new ArrayList<>();
