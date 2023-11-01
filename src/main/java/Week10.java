@@ -14,10 +14,14 @@ public class Week10 {
     );
 
     private static final Pattern METHOD_PATTERN = Pattern.compile(
-            "^\\s*((abstract|public|private|protected)\\s+)+static\\s+(final\\s+)*"
+            "^\\s*((abstract|public|private|protected|static|final)\\s+)+"
                     + "[\\w<>\\[\\]]+\\s+(\\w+)\\s*"
                     + "\\(([^)]*)\\)",
             Pattern.MULTILINE
+    );
+
+    private static final Pattern PACKAGE_PATTERN = Pattern.compile(
+            ""
     );
 
     public static List<String> getImportList(String fileContent) {
@@ -33,60 +37,23 @@ public class Week10 {
         return importList;
     }
 
-    public static List<String> getAllFunctions(String fileContent) {
-        List<String> importList = getImportList(fileContent);
-        List<String> allFunctions = new ArrayList<>();
-
-        Matcher matcher = METHOD_PATTERN.matcher(fileContent);
-        while (matcher.find()) {
-            String methodName = matcher.group(4); // (\\w+)
-            String[] params = matcher.group(5).split(", "); // ([^)]*)
-            StringBuilder paramTypes = new StringBuilder();
-            String function;
-
-            if (!params[0].isEmpty()) {
-                for (String param : params) {
-                    String paramType = param.trim().split(" ")[0];
-                    for (String imported : importList) {
-                        if (imported.contains(paramType) && !imported.contains("static")) {
-                            // Without 'import' and ending ';'
-                            paramType = imported.substring(7, imported.length() - 1);
-                        }
-                    }
-                    paramTypes.append(paramType).append(",");
-                }
-
-                function = methodName
-                        + "("
-                        + paramTypes.substring(0, paramTypes.length() - 1)
-                        + ")";
-            } else {
-                function = methodName + "()";
-            }
-
-            allFunctions.add(function);
-        }
-
-        return allFunctions;
-    }
-
-    public static void main(String[] args) throws IOException {
-        StringBuilder content = new StringBuilder();
-        File file;
-        String filename = "src"
-                + File.separator + "main"
-                + File.separator + "java"
-                + File.separator + "test.txt";
-        String workingDir = System.getProperty("user.dir");
-        file = new File(workingDir, filename);
-
-        BufferedReader reader = new BufferedReader(new FileReader(file));
-        String line = reader.readLine();
-        while (line != null) {
-            line = reader.readLine();
-            content.append(line).append("\n");
-        }
-
-        System.out.println(getAllFunctions(content.toString()));
-    }
+//    public static void main(String[] args) throws IOException {
+//        StringBuilder content = new StringBuilder();
+//        File file;
+//        String filename = "src"
+//                + File.separator + "main"
+//                + File.separator + "java"
+//                + File.separator + "test.txt";
+//        String workingDir = System.getProperty("user.dir");
+//        file = new File(workingDir, filename);
+//
+//        BufferedReader reader = new BufferedReader(new FileReader(file));
+//        String line = reader.readLine();
+//        while (line != null) {
+//            line = reader.readLine();
+//            content.append(line).append("\n");
+//        }
+//
+//        System.out.println(getAllFunctions(content.toString()));
+//    }
 }
