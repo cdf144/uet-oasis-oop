@@ -73,25 +73,25 @@ Hướng dẫn: Sau khi đã tải và cài đặt Intellij, nếu chạy lần 
 
 6. Click _Configure -> Project Defaults -> Project Structure_
 
-    ![anh1.png](anh1.png)
+    ![anh1.png](images/anh1.png)
 
 7. Cửa sổ mới hiện lên, bên trái chọn _SDKs_; bên phải click để chọn đường dẫn tới _JDK home path_. Sau khi chọn thành công click _OK_ để ghi nhận.
 
-    ![anh2.png](anh2.png)
+    ![anh2.png](images/anh2.png)
 
 Như vậy là đã config xong, lưu ý việc này chỉ tiến hành 1 lần, các lần sau không cần làm lại.
 
 Tiếp theo, để tạo mới project, click vào _Create New Project_ ở cửa sổ đầu tiên, tiếp đó 2 lần để nguyên mặc định và click _Next_, _Next_ (2 lần). Ở cửa sổ cuối cùng, yêu cầu điền tên project và nơi lưu mã nguồn tương ứng. Sau khi hoàn thành, click _Finish_ để xác nhận tạo mới project.
 
-![anh3.png](anh3.png)
+![anh3.png](images/anh3.png)
 
 Tạo mới lớp Student bằng cách: right click _src -> New -> Java Class_; sau đó đặt tên cho class là Student và click _OK_. Tự hoàn thiện các yêu cầu còn lại.
 
-![anh4.png](anh4.png)
+![anh4.png](images/anh4.png)
 
 Để chạy chương trình, right click class chứa phương thức _main_ cần chạy, chọn _Run_ (hoặc _Debug_)
 
-![anh5.png](anh5.png)
+![anh5.png](images/anh5.png)
 
 ### Định dạng đầu vào :
 

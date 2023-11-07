@@ -21,19 +21,19 @@
 
     - Sử dụng Windows search (`Windows + S`) tìm kiếm “Edit the system environment variable”. Trong hộp thoại “System Properties” hiện lên, chọn “Environment Variables” như hình.
 
-    ![hello2.png](hello2.png)
+    ![hello2.png](images/hello2.png)
 
     Trong hộp thoại Environment Variables, vào phần System variables và chọn New.
 
-    ![hello3.png](hello3.png)
+    ![hello3.png](images/hello3.png)
 
     Trong hộp thoại New System Variable, điền vào ô **Variable name** là **JAVA_HOME**, còn trong ô **Variable value** nhấn vào nút **Browse Directory** và trỏ tới đường dẫn cài đặt JDK. Nhấn OK để hoàn tất việc đặt tên biến môi trường.
  
-    ![hello4.png](hello4.png)
+    ![hello4.png](images/hello4.png)
 
     Tiếp theo, cũng trong phần System variables, tiến hành sửa đổi biến môi trường **Path** như sau: Kích chuột vào dòng **Path** và chọn **Edit**. Hộp thoại **Edit environment variable** xuất hiện, chúng ta nhấn chuột vào nút **New** và điền vào dòng sau: **%JAVA_HOME%\bin**, nhấn OK để kết thúc.
 
-    ![hello5.png](hello5.png)
+    ![hello5.png](images/hello5.png)
 
     - Kiểm tra bằng cách mở cmd, nhập vào dòng: **java –version**. Nếu thông tin hiển thị ra là version Java tương tự như hình dưới là thành công.
 
