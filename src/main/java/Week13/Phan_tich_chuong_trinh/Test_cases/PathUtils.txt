@@ -34,15 +34,15 @@ import java.util.Objects;
  *      *
  *      * For purposes of this example, the output directory already contains
  *      * the following files: `artifact.txt`, `artifact-3.txt`
- *      *&#47;
+ *      */
  *
  *     Path collectionPath = Paths.get(testContext.getOutputDirectory());
- *     // =&gt; C:\git\my-project\test-output\Default suite
+ *     // => C:\git\my-project\test-output\Default suite
  *
  *     Path artifactPath;
  *     try {
  *         artifactPath = PathUtils.getNextPath(collectionPath, "artifact", "txt");
- *         // =&gt; C:\git\my-project\test-output\Default suite\artifact-4.txt
+ *         // => C:\git\my-project\test-output\Default suite\artifact-4.txt
  *     } catch (IOException e) {
  *         provider.getLogger().info("Unable to get output path; no artifact was captured", e);
  *         return;
@@ -103,11 +103,10 @@ public final class PathUtils {
         /**
          * Get the resolved Maven-derived path associated with this constant.
          *
-         * @param subdirs optional sub-path
          * @return Maven folder path
          */
-        public Path getPath(String... subdirs) {
-            return getTargetPath().resolve(Paths.get(folder, subdirs));
+        public Path getPath() {
+            return getTargetPath().resolve(folder);
         }
 
         /**
@@ -133,12 +132,8 @@ public final class PathUtils {
          * @return reports directory path
          */
         public static Path getPathForObject(Object obj) {
-            String[] subdirs = {};
-            if (obj instanceof PathModifier) {
-            	String message = String.format("Null path modifier returned by: %s", obj.getClass().getName());
-                subdirs = Objects.requireNonNull(((PathModifier) obj).getSubPath(), message);
-            }
-            return fromObject(obj).getPath(subdirs);
+            ReportsDirectory constant = fromObject(obj);
+            return getTargetPath().resolve(constant.folder);
         }
 
         /**
@@ -147,7 +142,7 @@ public final class PathUtils {
          * @return path for project 'target' folder
          */
         private static Path getTargetPath() {
-            return Paths.get(getBaseDir()).resolve("target");
+            return Paths.get(getBaseDir(), "target");
         }
     }
 
@@ -160,7 +155,7 @@ public final class PathUtils {
      * @return the next available path in sequence
      * @throws IOException if an I/O error is thrown when accessing the starting file.
      */
-    public static Path getNextPath(Path targetPath, String baseName, String extension) throws IOException {
+    public static Path getNextPath(Path targetPath, String baseName, String extension) {
         Objects.requireNonNull(targetPath, "[targetPath] must be non-null");
         Objects.requireNonNull(baseName, "[baseName] must be non-null");
         Objects.requireNonNull(extension, "[extension] must be non-null");
@@ -209,12 +204,12 @@ public final class PathUtils {
         }
 
         @Override
-        public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs) throws IOException {
+        public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs) {
             return FileVisitResult.CONTINUE;
         }
 
         @Override
-        public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
+        public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) {
             if (attrs.isRegularFile() && pathMatcher.matches(file.getFileName())) {
                 String name = file.getFileName().toString();
                 String iStr = "0" + name.substring(base, name.length() - ext);
@@ -225,12 +220,12 @@ public final class PathUtils {
         }
 
         @Override
-        public FileVisitResult visitFileFailed(Path file, IOException exc) throws IOException {
+        public FileVisitResult visitFileFailed(Path file, IOException exc) {
             return FileVisitResult.CONTINUE;
         }
 
         @Override
-        public FileVisitResult postVisitDirectory(Path dir, IOException exc) throws IOException {
+        public FileVisitResult postVisitDirectory(Path dir, IOException exc) {
             return FileVisitResult.CONTINUE;
         }
 
@@ -247,51 +242,4 @@ public final class PathUtils {
             return newName;
         }
     }
-
-    /**
-     * Prepend the specified string to the indicated array.
-     *
-     * @param prefix string to be prepended
-     * @param strings target string array
-     * @return target array prefixed with the specified string
-     */
-    public static String[] prepend(String prefix, String... strings) {
-        int len = strings.length;
-        String[] temp = new String[len + 1];
-        if (len > 0) System.arraycopy(strings, 0, temp, 1, len);
-        temp[0] = prefix;
-        return temp;
-    }
-
-    /**
-     * Append the specified string to the indicated array.
-     *
-     * @param suffix string to be appended
-     * @param strings target string array
-     * @return target array with the specified string appended
-     */
-    public static String[] append(String suffix, String... strings) {
-        int len = strings.length;
-        String[] temp = new String[len + 1];
-        if (len > 0) System.arraycopy(strings, 0, temp, 0, len);
-        temp[len] = suffix;
-        return temp;
-    }
-
-    /**
-     * Classes that implement this interface are called to supply additional elements for the path returned by
-     * {@link ReportsDirectory#getPathForObject(Object)}. This enables the implementing class to partition artifacts
-     * based on scenario-specific criteria.
-     */
-    public interface PathModifier {
-
-        /**
-         * Get scenario-specific path modifier for {@link ReportsDirectory#getPathForObject(Object)}.
-         *
-         * @return scenario-specific path modifier
-         */
-        public String[] getSubPath();
-
-    }
-
 }

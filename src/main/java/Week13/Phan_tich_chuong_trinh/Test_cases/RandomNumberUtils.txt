@@ -28,18 +28,17 @@ public class RandomNumberUtils {
    *
    * @return the random int
    */
-  public static int randomPositiveInt() {
-    return randomInt(1, Integer.MAX_VALUE);
-  }
+//  public static int randomPositiveInt() {
+//    return randomInt(1, Integer.MAX_VALUE);
+//  }
 
   /**
    * Returns a random int which will be negative.
-   *
+   * public static int randomNegativeInt() {
+   *     return randomInt(Integer.MIN_VALUE, 0);
+   *   }
    * @return the random int
    */
-  public static int randomNegativeInt() {
-    return randomInt(Integer.MIN_VALUE, 0);
-  }
 
   /**
    * Returns a random int within the specified range.
@@ -65,11 +64,13 @@ public class RandomNumberUtils {
    * @throws IllegalArgumentException if minExclusive is greater than or equal to {@link
    *     Integer#MAX_VALUE}
    */
+  /*
   public static int randomIntGreaterThan(int minExclusive) {
     checkArgument(
         minExclusive < Integer.MAX_VALUE, "Cannot produce int greater than %s", Integer.MAX_VALUE);
     return randomInt(minExclusive + 1, Integer.MAX_VALUE);
   }
+  */
 
   /**
    * Returns a random int that is less than the given int.
@@ -108,9 +109,7 @@ public class RandomNumberUtils {
    *
    * @return the random long
    */
-  public static long randomNegativeLong() {
-    return randomLong(Long.MIN_VALUE, 0);
-  }
+  public static long randomNegativeLong(){return randomLong(Long.MIN_VALUE, 0);}
 
   /**
    * Returns a random long within the specified range.
@@ -191,13 +190,7 @@ public class RandomNumberUtils {
    * @return the random double
    * @throws IllegalArgumentException if endExclusive is less than startInclusive
    */
-  public static double randomDouble(double startInclusive, double endExclusive) {
-    checkArgument(startInclusive <= endExclusive, "End must be greater than or equal to start");
-    if (startInclusive == endExclusive) {
-      return startInclusive;
-    }
-    return RANDOM.doubles(1, startInclusive, endExclusive).sum();
-  }
+  public static double randomDouble(double startInclusive, double endExclusive){checkArgument(startInclusive <= endExclusive, "End must be greater than or equal to start")if (startInclusive == endExclusive){return startInclusive;}return RANDOM.doubles(1, startInclusive, endExclusive).sum();}
 
   /**
    * Returns a random double that is greater than the given double.
