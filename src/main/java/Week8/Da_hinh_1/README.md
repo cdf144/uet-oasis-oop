@@ -109,7 +109,7 @@ Lỗi sẽ xảy ra nếu ta cố tình khởi tạo trực tiếp đối tượ
 
 **Yêu cầu:** Dựa vào hướng dẫn bên trên, hãy cài đặt các lớp theo biếu đồ dưới đây.
 
-![Dahinh1.png](Dahinh1.png)
+![Dahinh1.png](images/Dahinh1.png)
 
 Một vài điều lưu ý sau đây:
 

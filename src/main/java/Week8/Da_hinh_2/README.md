@@ -1,7 +1,7 @@
 ### Đề bài :
 
-![Dahinh2_1.png](Dahinh2_1.png)
-![Dahinh2_2.png](Dahinh2_2.png)
+![Dahinh2_1.png](images/Dahinh2_1.png)
+![Dahinh2_2.png](images/Dahinh2_2.png)
 
 Tiếp tục từ bài buổi trước, **quan sát biểu đồ lớp trên đây**, hãy:
 

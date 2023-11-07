@@ -4,7 +4,7 @@
 
 Cài đặt các interface, class **GeometricObject**, **Point**, **Circle**, **Triangle**, **ShapeUtil** tuân theo biểu đồ lớp dưới đây:
 
-![oop_test2.png](oop_test2.png)
+![oop_test2.png](images/oop_test2.png)
 
 1. Tạo các lớp, thuộc tính, getter, setter, constructor như biểu đồ lớp. _Lưu ý có thể đặt thêm các phương thức khác để phục vụ mục đích riêng, tuy nhiên lớp **Triangle** không có 3 phương thức setP1(), setP2(), setP3()._
 
@@ -26,11 +26,11 @@ Cài đặt các interface, class **GeometricObject**, **Point**, **Circle**, **
 
 5. Một số công thức toán học cần nhớ:
 
-   ![cong_thuc.png](cong_thuc.png)
+   ![cong_thuc.png](images/cong_thuc.png)
 
 6. Khi khởi tạo tam giác với 3 điểm đầu vào, có thể xảy ra ngoại lệ: có 2 điểm trùng nhau, 3 điểm thẳng hàng. Vì vậy, hãy sửa đổi phương thức khởi tạo 3 tham số của lớp **Triangle**; cụ thể cho _throws RuntimeException_ khi xảy ra trường hợp trên. Theo dõi hình dưới:
 
-    ![triangle.png](triangle.png)
+    ![triangle.png](images/triangle.png)
 
 ### Định dạng đầu vào :
 

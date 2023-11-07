@@ -2,7 +2,7 @@
 
 Cài đặt các lớp **Vehicle**, **Car**, **MotorBike**, **Person** dựa theo biểu đồ lớp dưới đây:
 
-![Test1.png](Test1.png)
+![Test1.png](images/Test1.png)
 
 1. Tạo các lớp, thuộc tính, getter, setter, constructor như biểu đồ lớp
 
