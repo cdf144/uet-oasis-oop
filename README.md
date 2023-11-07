@@ -1,16 +1,19 @@
 ## Java OOP Exercises
 
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+
+![logo-mini.89ecf79d.png](resources/logo-mini.89ecf79d.png)
+
 This is my personal repository of the OOP exercises on OASIS-UET I have done.
+
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 #### Notes
 
-- These source codes are for referencing/educational purposes only.
-If you are also doing exercises on OASIS, I will not be responsible for you being detected for code plagiarism.  
-(Yes, OASIS does have a code copy/plagiarism detection, though information on how sophisticated it is scarce)
-- These are just my answers to the exercises, and *only* as answers to exercises, no extra features included.
-They will pass all test cases should those not change over years/semesters as another method to prevent code copying.
-- There *will* be some coding style inconsistencies
-(incomplete or uninformative comments/javadocs, unusual/complex implementations and solutions to problems, and so on)
+- These source codes are for referencing/educational purposes only. If you are also doing exercises on OASIS, I will not be responsible for you being detected for code plagiarism.  
+(Yes, OASIS does have a code copy/plagiarism detection, though I am not sure how sophisticated and deep the analysis is, nor do I have knowledge of what the threshold of being categorized as plagiarism is)
+- These are just my answers to the exercises, and *only* as answers to exercises, no extra functions included. They will pass all test cases should those not change over years/semesters as another method to prevent code copying.
+- There *will* be some coding style inconsistencies (incomplete or uninformative comments/javadocs, unusual/complex implementations and solutions to problems, and so on)
 which can't be helped because I don't have time to go back and refactor them.
 - There are also custom JUnit Tests I made just because I wanted to practice making Unit Tests.
 You can also reference or even use those to your liking.
