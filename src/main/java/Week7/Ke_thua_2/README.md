@@ -2,7 +2,7 @@
 
 Cài đặt các lớp Student, Staff, Person tuân theo biểu đồ lớp đưới đây:
 
-![Kethua222.png](Kethua222.png)
+![Kethua222.png](images/Kethua222.png)
 
 ### Định dạng đầu vào :
 
