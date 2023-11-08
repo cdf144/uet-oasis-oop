@@ -93,4 +93,4 @@ Bao gồm các phương thức `public` có chức năng như sau:
 - Tất cả file .java đặt cùng trong một folder và được nén lại dưới đuôi .zip
 - Tên folder chứa các file .java không được chứa ký tự đặc biệt hoặc ký tự khoảng trắng.
 
-### _~Hết~_
+### _\~Hết\~_
