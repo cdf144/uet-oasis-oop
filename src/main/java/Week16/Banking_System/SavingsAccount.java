@@ -33,7 +33,6 @@ public class SavingsAccount extends Account {
             return;
         }
 
-        double initialBalance = this.balance;
         try {
             doWithdrawing(amount);
         } catch (InvalidFundingAmountException
@@ -42,6 +41,7 @@ public class SavingsAccount extends Account {
             return;
         }
 
+        double initialBalance = this.balance;
         this.transactionList.add(new Transaction(
                 Transaction.TYPE_WITHDRAW_SAVINGS,
                 amount,
@@ -56,7 +56,6 @@ public class SavingsAccount extends Account {
      * @param amount amount
      */
     public void deposit(double amount) {
-        double initialBalance = this.balance;
         try {
             doDepositing(amount);
         } catch (InvalidFundingAmountException e) {
@@ -64,6 +63,7 @@ public class SavingsAccount extends Account {
             return;
         }
 
+        double initialBalance = this.balance;
         this.transactionList.add(new Transaction(
                 Transaction.TYPE_DEPOSIT_SAVINGS,
                 amount,

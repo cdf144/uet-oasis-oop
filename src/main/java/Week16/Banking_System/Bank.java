@@ -113,8 +113,8 @@ public class Bank {
             int i = 0;
             while (i < customerList.size()) {
                 if (customerList.get(i).getIdNumber() == customerId) {
-                    for (int j = 0; j < newCustomer.getAccountList().size(); j++) {
-                        customerList.get(i).addAccount(newCustomer.getAccountList().get(j));
+                    for (Account account : newCustomer.getAccountList()) {
+                        customerList.get(i).addAccount(account);
                     }
                     break;
                 }
