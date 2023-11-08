@@ -73,8 +73,4 @@ public class Game {
     public ArrayList<Move> getMoveHistory() {
         return moveHistory;
     }
-
-    public void setMoveHistory(ArrayList<Move> moveHistory) {
-        this.moveHistory = moveHistory;
-    }
 }
