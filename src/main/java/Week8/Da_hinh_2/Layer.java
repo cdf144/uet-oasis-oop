@@ -44,13 +44,4 @@ public class Layer {
         LinkedHashSet<Shape> shapeSet = new LinkedHashSet<>(shapes);
         this.shapes = new ArrayList<>(shapeSet);
     }
-
-    public static void main(String[] args) {
-        Point point = new Point(5.0, 8.0);
-        Shape s1 = new Square(point, 4.0, "", true);
-        System.out.println(s1);
-
-        Rectangle s2 = new Square(point, 2.5, "TRUE", true);
-        System.out.println(s2);
-    }
 }

@@ -80,6 +80,11 @@ public class Student {
         return String.format("%s - %s - %s - %s", name, id, group, email);
     }
 
+    /**
+     * Check if another Student is the same based on ID.
+     * @param o Another object
+     * @return If equal based on ID
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o) {
