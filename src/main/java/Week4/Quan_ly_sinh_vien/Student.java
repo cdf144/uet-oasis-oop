@@ -1,5 +1,7 @@
 package Week4.Quan_ly_sinh_vien;
 
+import java.util.Objects;
+
 public class Student {
     private String name;
     private String id;
@@ -76,5 +78,18 @@ public class Student {
 
     public String getInfo() {
         return String.format("%s - %s - %s - %s", name, id, group, email);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || this.getClass() != o.getClass()) {
+            return false;
+        }
+
+        Student student = (Student) o;
+        return Objects.equals(this.id, student.id);
     }
 }

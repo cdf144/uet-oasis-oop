@@ -27,10 +27,8 @@ public class StudentManagement {
     public void addStudent(Student newStudent) {
         boolean exist = false;
 
-        for (int i = 0; i < numberOfStudents; ++i) {
-            if (Objects.equals(newStudent.getName(), students[i].getName())
-                    && Objects.equals(newStudent.getId(), students[i].getId())
-                    && Objects.equals(newStudent.getEmail(), students[i].getEmail())) {
+        for (Student student : students) {
+            if (student.equals(newStudent)) {
                 exist = true;
                 break;
             }
@@ -50,15 +48,15 @@ public class StudentManagement {
         StringBuilder output = new StringBuilder();
         Map<String, List<Student>> studentGroupMap = new LinkedHashMap<>();
 
-        for (int i = 0; i < numberOfStudents; ++i) {
-            if (students[i] != null) {
-                String group = students[i].getGroup();
+        for (Student student : students) {
+            if (student != null) {
+                String group = student.getGroup();
                 if (studentGroupMap.get(group) == null) {
                     List<Student> listStudent = new ArrayList<>();
-                    listStudent.add(students[i]);
+                    listStudent.add(student);
                     studentGroupMap.put(group, listStudent);
                 } else {
-                    studentGroupMap.get(group).add(students[i]);
+                    studentGroupMap.get(group).add(student);
                 }
             }
         }
@@ -70,6 +68,7 @@ public class StudentManagement {
                 output.append(student.getInfo()).append("\n");
             }
         }
+
         return output.toString();
     }
 
