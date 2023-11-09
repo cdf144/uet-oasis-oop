@@ -9,24 +9,24 @@ import java.util.regex.Pattern;
 
 public class Week10 {
     private static final Pattern PACKAGE_PATTERN = Pattern.compile(
-            "^package\\s(.*);$",
+            "^package\\s+(.*);$",
             Pattern.MULTILINE
     );
 
     private static final Pattern IMPORT_PATTERN = Pattern.compile(
-            "^import\\s(?:static\\s)?((?:\\w+\\.)+(\\w+));$",
+            "^import\\s+(?:static\\s+)?((?:\\w+\\.)+(\\w+));$",
             Pattern.MULTILINE
     );
 
     private static final Pattern CLASS_PATTERN = Pattern.compile(
-            "^(?:\\s{2})*(?:(?:abstract|public|private|protected|static|final)\\s)*"
-                    + "(class|interface|enum)\\s([^<\\s]+)([^{]+)?\\s\\{",
+            "^(?:\\s{2})*(?:(?:abstract|public|private|protected|static|final)\\s+)*"
+                    + "(class|interface|enum)\\s+([^<\\s]+)([^{]+)?\\s*\\{",
             Pattern.MULTILINE
     );
 
     private static final Pattern STATIC_METHOD_PATTERN = Pattern.compile(
             "^(?<!\\s{0,20}/\\*\\n)" // Negative lookbehind
-                    + "(?:\\s{2})+(?:(?:abstract|public|private|protected)\\s+)*"
+                    + "(?:\\s{2})+(?:(?:public|private|protected)\\s+)*"
                     + "static\\s+(?:final\\s+)?[\\w<>,.?\\[\\]\\s]+\\s+(\\w+)"
                     + "\\s*\\(([\\w<>,.?\\[\\]\\s]*)\\)\\s*\\{",
             Pattern.MULTILINE
