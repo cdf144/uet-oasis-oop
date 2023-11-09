@@ -1,18 +1,20 @@
 package Week16.Banking_System;
 
-import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.Scanner;
 
 public class Bank {
     private List<Customer> customerList;
 
     public Bank() {
         this.customerList = new ArrayList<>();
+    }
+
+    public List<Customer> getCustomerList() {
+        return this.customerList;
     }
 
     /**
@@ -33,27 +35,17 @@ public class Bank {
      * @param inputStream input stream
      */
     public void readCustomerList(InputStream inputStream) {
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+        Scanner sc = new Scanner(inputStream);
         String readLine;
 
-        /*
-         * Each readLine() call is put into a try-catch block for IOExceptions
-         * instead of adding "throws IOException" to method signature because
-         * the tests weren't made to expect that readCustomerList would throw
-         * any exception. This makes the method code moderately more lengthy
-         * but enables it to pass all tests.
-         * Alternatively you can use Scanner and Scanner.hasNextLine(), which
-         * throws no exception in the while loop and thus does not have to be
-         * taken care of.
-         */
-        try {
-            readLine = bufferedReader.readLine();
-        } catch (IOException e) {
-            System.err.println(e.toString());
+        if (sc.hasNextLine()) {
+            readLine = sc.nextLine();
+        } else {
             return;
         }
         // Loop for reading Customer info
-        while (readLine != null) {
+        while (sc.hasNextLine()) {
+            assert readLine != null;
             String[] partsCustomer = readLine.split(" ");
             StringBuilder customerName = new StringBuilder();
             long customerId = 0;
@@ -72,15 +64,12 @@ public class Bank {
             }
 
             Customer newCustomer = new Customer(customerId, customerName.toString());
-
-            // Loop for reading Customer's Account(s) info
-            try {
-                readLine = bufferedReader.readLine();
-            } catch (IOException e) {
-                System.err.println(e.toString());
-                return;
-            }
-            while (readLine != null && Character.isDigit(readLine.charAt(0))) {
+            // Loop for reading the Customer's Account(s)
+            while (
+                    sc.hasNextLine()
+                    && (readLine = sc.nextLine()) != null
+                    && Character.isDigit(readLine.charAt(0))
+            ) {
                 String[] partsAccount = readLine.split(" ");
 
                 long accountId = Long.parseLong(partsAccount[0]);
@@ -96,13 +85,6 @@ public class Bank {
                         throw new IllegalArgumentException();
                     }
                 } catch (IllegalArgumentException e) {
-                    System.err.println(e.toString());
-                    return;
-                }
-
-                try {
-                    readLine = bufferedReader.readLine();
-                } catch (IOException e) {
                     System.err.println(e.toString());
                     return;
                 }
@@ -127,10 +109,6 @@ public class Bank {
                 customerList.add(newCustomer);
             }
         }
-    }
-
-    public List<Customer> getCustomerList() {
-        return this.customerList;
     }
 
     /**
