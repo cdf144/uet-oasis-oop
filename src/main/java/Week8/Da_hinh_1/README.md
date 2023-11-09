@@ -97,9 +97,9 @@ public class VCB extends Bank {
 ```java
 public class TestBank {
     public static void main(String[] args) {
-    Bank bank = new VCB();
-    double interest = bank.getRateOfInterest();
-    System.out.println("Ti le lai suat la: " + interest + " %");
+        Bank bank = new VCB();
+        double interest = bank.getRateOfInterest();
+        System.out.println("Ti le lai suat la: " + interest + " %");
     }
 }
 ```
