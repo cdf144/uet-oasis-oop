@@ -53,7 +53,7 @@ public class Bank {
             for (String part : partsCustomer) {
                 char firstChar = part.charAt(0);
                 if (!Character.isDigit(firstChar)) {
-                    if (Objects.equals(customerName.toString(), "")) {
+                    if (customerName.toString().isEmpty()) {
                         customerName.append(part);
                     } else {
                         customerName.append(" ").append(part);
