@@ -7,7 +7,7 @@ public class Circle extends Shape {
     protected double radius;
 
     /**
-     * Week10.Circle constructor 1.
+     * Circle constructor 1.
      */
     public Circle() {
         super();
@@ -16,7 +16,7 @@ public class Circle extends Shape {
     }
 
     /**
-     * Week10.Circle constructor 2.
+     * Circle constructor 2.
      *
      * @param radius Week10.Circle radius
      */
@@ -27,7 +27,7 @@ public class Circle extends Shape {
     }
 
     /**
-     * Week10.Circle constructor 3.
+     * Circle constructor 3.
      *
      * @param radius Week10.Circle radius
      * @param color  Shape color
@@ -40,7 +40,7 @@ public class Circle extends Shape {
     }
 
     /**
-     * Week10.Circle constructor 4.
+     * Circle constructor 4.
      *
      * @param center center
      * @param radius radisu
@@ -90,7 +90,7 @@ public class Circle extends Shape {
     }
 
     /**
-     * Week10.Circle toString override.
+     * Circle toString override.
      *
      * @return Week10.Circle string
      */
@@ -124,16 +124,13 @@ public class Circle extends Shape {
     }
 
     /**
-     * Week10.Circle hashcode, not taking into account color
+     * Circle hashcode, not taking into account color
      * and filled.
      *
      * @return hashcode
      */
     @Override
     public int hashCode() {
-        int hash = 1000;
-        hash += this.center.hashCode();
-        hash += Double.hashCode(this.radius);
-        return hash;
+        return Objects.hash(center, radius);
     }
 }

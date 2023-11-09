@@ -6,7 +6,7 @@ public class Circle {
     private String color;
 
     /**
-     * Week10.Circle constructor 1.
+     * Circle constructor 1.
      */
     public Circle() {
         this.radius = 0;
@@ -14,7 +14,7 @@ public class Circle {
     }
 
     /**
-     * Week10.Circle constructor 2.
+     * Circle constructor 2.
      *
      * @param radius radius
      */
@@ -24,7 +24,7 @@ public class Circle {
     }
 
     /**
-     * Week10.Circle constructor 3.
+     * Circle constructor 3.
      *
      * @param radius radius
      * @param color  color
@@ -55,7 +55,7 @@ public class Circle {
     }
 
     /**
-     * Week10.Circle to String.
+     * Circle to String.
      *
      * @return circle string
      */

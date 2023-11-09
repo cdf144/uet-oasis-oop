@@ -1,11 +1,13 @@
 package Week8.Da_hinh_2;
 
+import java.util.Objects;
+
 public class Point {
     private double pointX;
     private double pointY;
 
     /**
-     * Week10.Point constructor 1.
+     * Point constructor 1.
      */
     public Point() {
         pointX = 0.0;
@@ -13,7 +15,7 @@ public class Point {
     }
 
     /**
-     * Week10.Point constructor 2.
+     * Point constructor 2.
      *
      * @param pointX pointX
      * @param pointY pointY
@@ -77,9 +79,9 @@ public class Point {
     }
 
     /**
-     * Week10.Point toString.
+     * Point toString.
      *
-     * @return Week10.Point string
+     * @return Point string
      */
     @Override
     public String toString() {
@@ -91,16 +93,12 @@ public class Point {
     }
 
     /**
-     * Week10.Point hashcode.
+     * Point hashcode.
      *
      * @return hashcode
      */
     @Override
     public int hashCode() {
-        int hashCode = 1;
-        hashCode += (int) Math.round(this.pointX);
-        hashCode += (int) Math.round(this.pointY);
-        hashCode += (int) Math.round(this.pointX * this.pointY);
-        return hashCode;
+        return Objects.hash(pointX, pointY);
     }
 }

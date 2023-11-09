@@ -6,7 +6,7 @@ public class Circle implements GeometricObject {
     private double radius;
 
     /**
-     * Week10.Circle constructor 1.
+     * Circle constructor 1.
      */
     public Circle() {
         this.center = new Point();
@@ -14,7 +14,7 @@ public class Circle implements GeometricObject {
     }
 
     /**
-     * Week10.Circle constructor 2.
+     * Circle constructor 2.
      *
      * @param center circle center
      * @param radius circle radius
@@ -73,9 +73,9 @@ public class Circle implements GeometricObject {
     }
 
     /**
-     * Get info string of Week10.Circle object.
+     * Get info string of Circle object.
      *
-     * @return info string of Week10.Circle instance
+     * @return info string of Circle instance
      */
     @Override
     public String getInfo() {

@@ -140,10 +140,6 @@ public class Rectangle extends Shape {
      */
     @Override
     public int hashCode() {
-        int hash = 2000;
-        hash += this.topLeft.hashCode();
-        hash += Double.hashCode(this.width);
-        hash += Double.hashCode(this.length);
-        return hash;
+        return Objects.hash(topLeft, width, length);
     }
 }

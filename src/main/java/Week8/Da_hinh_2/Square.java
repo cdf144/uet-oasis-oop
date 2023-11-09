@@ -97,10 +97,6 @@ public class Square extends Rectangle {
      */
     @Override
     public int hashCode() {
-        int hash = 3000;
-        hash += this.topLeft.hashCode();
-        hash += Double.hashCode(this.width);
-        hash += Double.hashCode(this.length);
-        return hash;
+        return Objects.hash(topLeft, width);
     }
 }
