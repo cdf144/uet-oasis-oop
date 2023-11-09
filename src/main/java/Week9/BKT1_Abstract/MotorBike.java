@@ -25,27 +25,12 @@ public class MotorBike extends Vehicle {
      * @return motorbike info string
      */
     public String getInfo() {
-        return "Motor Bike:\n" +
-                "\t" +
-                String.format("Brand: %s",
-                        this.brand) +
-                "\n" +
-                "\t" +
-                String.format("Model: %s",
-                        this.model) +
-                "\n" +
-                "\t" +
-                String.format("Registration Number: %s",
-                        this.registrationNumber) +
-                "\n" +
-                "\t" +
-                String.format("Has Side Car: %s",
-                        this.hasSidecar) +
-                "\n" +
-                "\t" +
-                String.format("Belongs to %s - %s",
-                        this.owner.getName(),
-                        this.owner.getAddress());
+        return "Motor Bike:\n"
+                + "\t" + String.format("Brand: %s", brand) + "\n"
+                + "\t" + String.format("Model: %s", model) + "\n"
+                + "\t" + String.format("Registration Number: %s", registrationNumber) + "\n"
+                + "\t" + String.format("Has Side Car: %s", hasSidecar)
+                + "\t" + String.format("Belongs to %s - %s", owner.getName(), owner.getAddress());
     }
 
     public boolean isHasSidecar() {

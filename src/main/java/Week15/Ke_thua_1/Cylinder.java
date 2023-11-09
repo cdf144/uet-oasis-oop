@@ -55,9 +55,8 @@ public class Cylinder extends Circle {
      */
     @Override
     public String toString() {
-        String cylinderString = String.format("Cylinder[%s,height=%.1f]",
+        return String.format("Cylinder[%s,height=%.1f]",
                 super.toString(),
                 this.height);
-        return cylinderString;
     }
 }

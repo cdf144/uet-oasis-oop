@@ -61,7 +61,7 @@ public class Circle {
      */
     @Override
     public String toString() {
-        return String.format("Week10.Circle[radius=%.1f,color=%s]",
+        return String.format("Circle[radius=%.1f,color=%s]",
                 this.radius,
                 this.color);
     }
