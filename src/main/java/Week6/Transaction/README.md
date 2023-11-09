@@ -29,8 +29,8 @@
     - Nếu loại giao dịch truyền vào `operation` khác hai loại đã được định nghĩa, in ra xuất chuẩn: `Yeu cau khong hop le!`
 - Tạo phương thức không có tham số **printTransaction()** để đưa ra các dòng xuất chuẩn thông tin về tất cả các giao dịch của mỗi tài khoản, có kiểu trả về `void`, mức truy nhập **public**. Số tiền in ra được **làm tròn hai chữ số thập phân sau dấu phẩy**. Ví dụ: 
 
-    ```
-    Account acc= new Account();  
+    ```java
+    Account acc = new Account();  
     acc.addTransaction(2000.255,"deposit");  
     acc.addTransaction(1000,"withdraw");  
     acc.printTransaction();
