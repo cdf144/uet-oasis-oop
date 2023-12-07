@@ -74,13 +74,13 @@ public class CircleTest {
     @Test
     public void testToString() {
         Circle circle = new Circle(new Point(1.0, 2.0), 5.0, null, true);
-        assertEquals("Week10.Circle[center=(1.0,2.0),radius=5.0,color=null,filled=true]", circle.toString());
+        assertEquals("Circle[center=(1.0,2.0),radius=5.0,color=null,filled=true]", circle.toString());
 
         circle.setColor("");
-        assertEquals("Week10.Circle[center=(1.0,2.0),radius=5.0,color=null,filled=true]", circle.toString());
+        assertEquals("Circle[center=(1.0,2.0),radius=5.0,color=null,filled=true]", circle.toString());
 
         circle.setColor("red");
-        assertEquals("Week10.Circle[center=(1.0,2.0),radius=5.0,color=red,filled=true]", circle.toString());
+        assertEquals("Circle[center=(1.0,2.0),radius=5.0,color=red,filled=true]", circle.toString());
     }
 
     @Test

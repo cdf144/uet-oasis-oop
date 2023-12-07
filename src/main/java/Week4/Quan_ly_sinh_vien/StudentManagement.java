@@ -27,8 +27,8 @@ public class StudentManagement {
     public void addStudent(Student newStudent) {
         boolean exist = false;
 
-        for (Student student : students) {
-            if (student.equals(newStudent)) {
+        for (int i = 0; i < numberOfStudents; i++) {
+            if (newStudent.equals(students[i])) {
                 exist = true;
                 break;
             }
@@ -48,15 +48,15 @@ public class StudentManagement {
         StringBuilder output = new StringBuilder();
         Map<String, List<Student>> studentGroupMap = new LinkedHashMap<>();
 
-        for (Student student : students) {
-            if (student != null) {
-                String group = student.getGroup();
+        for (int i = 0; i < numberOfStudents; i++) {
+            if (students[i] != null) {
+                String group = students[i].getGroup();
                 if (studentGroupMap.get(group) == null) {
                     List<Student> listStudent = new ArrayList<>();
-                    listStudent.add(student);
+                    listStudent.add(students[i]);
                     studentGroupMap.put(group, listStudent);
                 } else {
-                    studentGroupMap.get(group).add(student);
+                    studentGroupMap.get(group).add(students[i]);
                 }
             }
         }

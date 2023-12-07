@@ -8,7 +8,7 @@ public class Triangle implements GeometricObject {
     private Point p3;
 
     /**
-     * Week10.Triangle constructor 1.
+     * Triangle constructor 1.
      */
     public Triangle() {
         this.p1 = new Point();
@@ -17,7 +17,7 @@ public class Triangle implements GeometricObject {
     }
 
     /**
-     * Week10.Triangle constructor 2.
+     * Triangle constructor 2.
      *
      * @param p1 point 1
      * @param p2 point 2
@@ -105,7 +105,7 @@ public class Triangle implements GeometricObject {
     }
 
     /**
-     * Get area of Week10.Triangle with
+     * Get area of Triangle with
      * Heron's formula.
      *
      * @return Week10.Triangle area
@@ -120,9 +120,9 @@ public class Triangle implements GeometricObject {
     }
 
     /**
-     * Get Week10.Triangle perimeter.
+     * Get Triangle perimeter.
      *
-     * @return Week10.Triangle perimeter
+     * @return Triangle perimeter
      */
     @Override
     public double getPerimeter() {
@@ -133,9 +133,9 @@ public class Triangle implements GeometricObject {
     }
 
     /**
-     * Get Week10.Triangle info.
+     * Get Triangle info.
      *
-     * @return Week10.Triangle info string
+     * @return Triangle info string
      */
     @Override
     public String getInfo() {

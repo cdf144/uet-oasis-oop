@@ -29,7 +29,7 @@ public class MotorBike extends Vehicle {
                 + "\t" + String.format("Brand: %s", brand) + "\n"
                 + "\t" + String.format("Model: %s", model) + "\n"
                 + "\t" + String.format("Registration Number: %s", registrationNumber) + "\n"
-                + "\t" + String.format("Has Side Car: %s", hasSidecar)
+                + "\t" + String.format("Has Side Car: %s", hasSidecar) + "\n"
                 + "\t" + String.format("Belongs to %s - %s", owner.getName(), owner.getAddress());
     }
 

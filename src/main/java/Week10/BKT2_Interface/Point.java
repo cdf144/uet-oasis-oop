@@ -8,7 +8,7 @@ public class Point {
     private double pointY;
 
     /**
-     * Week10.Point constructor 1.
+     * Point constructor 1.
      */
     public Point() {
         this.pointX = 0;
@@ -16,7 +16,7 @@ public class Point {
     }
 
     /**
-     * Week10.Point constructor 2.
+     * Point constructor 2.
      *
      * @param x X coordinate
      * @param y Y coordinate
@@ -27,7 +27,7 @@ public class Point {
     }
 
     /**
-     * Week10.Point copy constructor.
+     * Point copy constructor.
      *
      * @param point Another point to copy
      */
@@ -72,9 +72,9 @@ public class Point {
     }
 
     /**
-     * Week10.Point toString.
+     * Point toString.
      *
-     * @return Week10.Point string
+     * @return Point string
      */
     @Override
     public String toString() {

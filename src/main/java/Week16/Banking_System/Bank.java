@@ -22,7 +22,7 @@ public class Bank {
      *
      * @return boolean isNotEmpty
      */
-    public boolean isNotEmpty() {
+    private boolean isNotEmpty() {
         if (this.customerList == null) {
             this.customerList = new ArrayList<>();
         }
@@ -112,22 +112,14 @@ public class Bank {
     }
 
     /**
-     * Get customer info by order of ID.
+     * Get customers' info by order of ID.
      *
-     * @return customer list string
+     * @return customer list string by ID order
      */
     public String getCustomersInfoByIdOrder() {
         if (this.isNotEmpty()) {
-            StringBuilder customersInfoByIdOrder = new StringBuilder();
-            customerList.sort(new IdComparator());
-            for (Customer customer : customerList) {
-                if (customersInfoByIdOrder.length() == 0) {
-                    customersInfoByIdOrder.append(customer.getCustomerInfo());
-                } else {
-                    customersInfoByIdOrder.append("\n").append(customer.getCustomerInfo());
-                }
-            }
-            return customersInfoByIdOrder.toString();
+            customerList.sort((c1, c2) -> Long.compare(c1.getIdNumber(), c2.getIdNumber()));
+            return customersInfoString();
         } else {
             return "";
         }
@@ -136,22 +128,32 @@ public class Bank {
     /**
      * Get customer info by order of Name.
      *
-     * @return customer list string
+     * @return customer list string by Name order
      */
     public String getCustomersInfoByNameOrder() {
         if (this.isNotEmpty()) {
-            StringBuilder customersInfoByNameOrder = new StringBuilder();
-            customerList.sort(new NameComparator());
-            for (Customer customer : customerList) {
-                if (customersInfoByNameOrder.length() == 0) {
-                    customersInfoByNameOrder.append(customer.getCustomerInfo());
-                } else {
-                    customersInfoByNameOrder.append("\n").append(customer.getCustomerInfo());
-                }
-            }
-            return customersInfoByNameOrder.toString();
+            customerList.sort((c1, c2) -> c1.getFullName().compareTo(c2.getFullName()));
+            return customersInfoString();
         } else {
             return "";
         }
+    }
+
+    /**
+     * Build String for customers' info.
+     *
+     * @return customer list string
+     */
+    private String customersInfoString() {
+        StringBuilder customersInfo = new StringBuilder();
+        for (Customer customer : customerList) {
+            if (customersInfo.length() == 0) {
+                customersInfo.append(customer.getCustomerInfo());
+            } else {
+                customersInfo.append("\n").append(customer.getCustomerInfo());
+            }
+        }
+
+        return customersInfo.toString();
     }
 }
