@@ -1,9 +1,10 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Week7" type="JUnit" factoryName="JUnit" folderName="Week Tests">
     <module name="java-oop" />
+    <option name="PACKAGE_NAME" value="Week7" />
     <option name="MAIN_CLASS_NAME" value="" />
     <option name="METHOD_NAME" value="" />
-    <option name="TEST_OBJECT" value="directory" />
+    <option name="TEST_OBJECT" value="package" />
     <dir value="$PROJECT_DIR$/src/test/java/Week7/" />
     <method v="2">
       <option name="Make" enabled="true" />

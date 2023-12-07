@@ -26,6 +26,9 @@ public class Utils {
 
         String line;
         while ((line = bufferedReader.readLine()) != null) {
+            if (!(stringContent.length() == 0)) {
+                stringContent.append("\n");
+            }
             stringContent.append(line);
         }
 

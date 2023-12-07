@@ -20,15 +20,15 @@ public class Week10 {
 
     private static final Pattern CLASS_PATTERN = Pattern.compile(
             "^(?:\\s{2})*(?:(?:abstract|public|private|protected|static|final)\\s+)*"
-                    + "(class|interface|enum)\\s+([^<\\s]+)([^{]+)?\\s*\\{",
+            + "(class|interface|enum)\\s+([^<\\s]+)([^{]+)?\\s*\\{",
             Pattern.MULTILINE
     );
 
     private static final Pattern STATIC_METHOD_PATTERN = Pattern.compile(
             "^(?<!\\s{0,20}/\\*\\n)" // Negative lookbehind
-                    + "(?:\\s{2})+(?:(?:public|private|protected)\\s+)*"
-                    + "static\\s+(?:final\\s+)?[\\w<>,.?\\[\\]\\s]+\\s+(\\w+)"
-                    + "\\s*\\(([\\w<>,.?\\[\\]\\s]*)\\)\\s*\\{",
+            + "(?:\\s{2})+(?:(?:public|private|protected)\\s+)*"
+            + "static\\s+(?:final\\s+)?[\\w<>,.?\\[\\]\\s]+\\s+(\\w+)"
+            + "\\s*\\(([\\w<>,.?\\[\\]\\s]*)\\)\\s*\\{",
             Pattern.MULTILINE
     );
 
