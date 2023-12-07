@@ -11,45 +11,45 @@ This is my personal repository of the OOP exercises on OASIS-UET I have done.
 ### Link to each exercise
 
 - TUẦN 1
-  - [Hướng dẫn sử dụng Git](https://github.com/cdf144/uet-oasis-oop/tree/8f44c7d6ac3c331e5bfe102c231ad892c20352a5/src/main/java/Week1/Huong_dan_su_dung_Git)
+  - [Hướng dẫn sử dụng Git](https://github.com/cdf144/uet-oasis-oop/tree/master/src/main/java/Week1/Huong_dan_su_dung_Git)
 - TUẦN 2
-  - [Helloworld](https://github.com/cdf144/uet-oasis-oop/tree/8f44c7d6ac3c331e5bfe102c231ad892c20352a5/src/main/java/Week2/Helloworld)
+  - [Helloworld](https://github.com/cdf144/uet-oasis-oop/tree/master/src/main/java/Week2/Helloworld)
 - TUẦN 3
-  - [JUnit](https://github.com/cdf144/uet-oasis-oop/tree/8f44c7d6ac3c331e5bfe102c231ad892c20352a5/src/main/java/Week3/JUnit)
+  - [JUnit](https://github.com/cdf144/uet-oasis-oop/tree/master/src/main/java/Week3/JUnit)
 - TUẦN 4
-  - [Quản lý sinh viên](https://github.com/cdf144/uet-oasis-oop/tree/8f44c7d6ac3c331e5bfe102c231ad892c20352a5/src/main/java/Week4/Quan_ly_sinh_vien)
+  - [Quản lý sinh viên](https://github.com/cdf144/uet-oasis-oop/tree/master/src/main/java/Week4/Quan_ly_sinh_vien)
 - TUẦN 5
-  - [Fibonacci](https://github.com/cdf144/uet-oasis-oop/tree/8f44c7d6ac3c331e5bfe102c231ad892c20352a5/src/main/java/Week5/Fibonacci)
-  - [Ước số chung lớn nhất](https://github.com/cdf144/uet-oasis-oop/tree/8f44c7d6ac3c331e5bfe102c231ad892c20352a5/src/main/java/Week5/Uoc_so_chung_lon_nhat)
-  - [Số nguyên tố](https://github.com/cdf144/uet-oasis-oop/tree/8f44c7d6ac3c331e5bfe102c231ad892c20352a5/src/main/java/Week5/So_nguyen_to)
-  - [Phân số](https://github.com/cdf144/uet-oasis-oop/tree/8f44c7d6ac3c331e5bfe102c231ad892c20352a5/src/main/java/Week5/Phan_so)
+  - [Fibonacci](https://github.com/cdf144/uet-oasis-oop/tree/master/src/main/java/Week5/Fibonacci)
+  - [Ước số chung lớn nhất](https://github.com/cdf144/uet-oasis-oop/tree/master/src/main/java/Week5/Uoc_so_chung_lon_nhat)
+  - [Số nguyên tố](https://github.com/cdf144/uet-oasis-oop/tree/master/src/main/java/Week5/So_nguyen_to)
+  - [Phân số](https://github.com/cdf144/uet-oasis-oop/tree/master/src/main/java/Week5/Phan_so)
 - TUẦN 6
-  - [Transaction](https://github.com/cdf144/uet-oasis-oop/tree/8f44c7d6ac3c331e5bfe102c231ad892c20352a5/src/main/java/Week6/Transaction)
+  - [Transaction](https://github.com/cdf144/uet-oasis-oop/tree/master/src/main/java/Week6/Transaction)
 - TUẦN 7
-  - [Kế thừa 2](https://github.com/cdf144/uet-oasis-oop/tree/8f44c7d6ac3c331e5bfe102c231ad892c20352a5/src/main/java/Week7/Ke_thua_2)
+  - [Kế thừa 2](https://github.com/cdf144/uet-oasis-oop/tree/master/src/main/java/Week7/Ke_thua_2)
 - TUẦN 8
-  - [Đa hình 1](https://github.com/cdf144/uet-oasis-oop/tree/8f44c7d6ac3c331e5bfe102c231ad892c20352a5/src/main/java/Week8/Da_hinh_1)
-  - [Đa hình 2](https://github.com/cdf144/uet-oasis-oop/tree/8f44c7d6ac3c331e5bfe102c231ad892c20352a5/src/main/java/Week8/Da_hinh_2)
-  - [Đa hình 3](https://github.com/cdf144/uet-oasis-oop/tree/8f44c7d6ac3c331e5bfe102c231ad892c20352a5/src/main/java/Week8/Da_hinh_3)
+  - [Đa hình 1](https://github.com/cdf144/uet-oasis-oop/tree/master/src/main/java/Week8/Da_hinh_1)
+  - [Đa hình 2](https://github.com/cdf144/uet-oasis-oop/tree/master/src/main/java/Week8/Da_hinh_2)
+  - [Đa hình 3](https://github.com/cdf144/uet-oasis-oop/tree/master/src/main/java/Week8/Da_hinh_3`)
 - TUẦN 9
-  - [Bài kiểm tra số 1 - Abstract](https://github.com/cdf144/uet-oasis-oop/tree/8f44c7d6ac3c331e5bfe102c231ad892c20352a5/src/main/java/Week9/BKT1_Abstract)
+  - [Bài kiểm tra số 1 - Abstract](https://github.com/cdf144/uet-oasis-oop/tree/master/src/main/java/Week9/BKT1_Abstract)
 - TUẦN 10
-  - [Bài kiểm tra số 2 - Interface](https://github.com/cdf144/uet-oasis-oop/tree/8f44c7d6ac3c331e5bfe102c231ad892c20352a5/src/main/java/Week10/BKT2_Interface)
+  - [Bài kiểm tra số 2 - Interface](https://github.com/cdf144/uet-oasis-oop/tree/master/src/main/java/Week10/BKT2_Interface)
 - TUẦN 11
-  - [Ngoại lệ (1)](https://github.com/cdf144/uet-oasis-oop/tree/8f44c7d6ac3c331e5bfe102c231ad892c20352a5/src/main/java/Week11/Ngoai_le_1)
-  - [Ngoại lệ (2)](https://github.com/cdf144/uet-oasis-oop/tree/8f44c7d6ac3c331e5bfe102c231ad892c20352a5/src/main/java/Week11/Ngoai_le_2)
+  - [Ngoại lệ (1)](https://github.com/cdf144/uet-oasis-oop/tree/master/src/main/java/Week11/Ngoai_le_1)
+  - [Ngoại lệ (2)](https://github.com/cdf144/uet-oasis-oop/tree/master/src/main/java/Week11/Ngoai_le_2)
 - TUẦN 12
-  - [Lập trình tổng quát](https://github.com/cdf144/uet-oasis-oop/tree/8f44c7d6ac3c331e5bfe102c231ad892c20352a5/src/main/java/Week12/Lap_trinh_tong_quat)
-  - [Cờ vua 1](https://github.com/cdf144/uet-oasis-oop/tree/8f44c7d6ac3c331e5bfe102c231ad892c20352a5/src/main/java/Week12/Co_vua_1)
+  - [Lập trình tổng quát](https://github.com/cdf144/uet-oasis-oop/tree/master/src/main/java/Week12/Lap_trinh_tong_quat)
+  - [Cờ vua 1](https://github.com/cdf144/uet-oasis-oop/tree/master/src/main/java/Week12/Co_vua_1)
 - TUẦN 13
-  - [Cờ vua 1 - Bài kiểm tra](https://github.com/cdf144/uet-oasis-oop/tree/8f44c7d6ac3c331e5bfe102c231ad892c20352a5/src/main/java/Week13/Co_vua_1_BKT)
-  - [Phân tích chương trình](https://github.com/cdf144/uet-oasis-oop/tree/8f44c7d6ac3c331e5bfe102c231ad892c20352a5/src/main/java/Week13/Phan_tich_chuong_trinh)
+  - [Cờ vua 1 - Bài kiểm tra](https://github.com/cdf144/uet-oasis-oop/tree/master/src/main/java/Week13/Co_vua_1_BKT)
+  - [Phân tích chương trình](https://github.com/cdf144/uet-oasis-oop/tree/master/src/main/java/Week13/Phan_tich_chuong_trinh)
 - TUẦN 14
-  - [Input, Output](https://github.com/cdf144/uet-oasis-oop/tree/8f44c7d6ac3c331e5bfe102c231ad892c20352a5/src/main/java/Week14/Input_Output)
+  - [Input, Output](https://github.com/cdf144/uet-oasis-oop/tree/master/src/main/java/Week14/Input_Output)
 - TUẦN 15
-  - [Kế thừa 1](https://github.com/cdf144/uet-oasis-oop/tree/8f44c7d6ac3c331e5bfe102c231ad892c20352a5/src/main/java/Week15/Ke_thua_1)
+  - [Kế thừa 1](https://github.com/cdf144/uet-oasis-oop/tree/master/src/main/java/Week15/Ke_thua_1)
 - TUẦN 16
-  - [Banking System](https://github.com/cdf144/uet-oasis-oop/tree/8f44c7d6ac3c331e5bfe102c231ad892c20352a5/src/main/java/Week16/Banking_System)
+  - [Banking System](https://github.com/cdf144/uet-oasis-oop/tree/master/src/main/java/Week16/Banking_System)
 
 
 ### Notes
