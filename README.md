@@ -1,12 +1,16 @@
-## Java OOP Exercises
+## UET OASIS OOP
 
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+![Maven](https://img.shields.io/badge/apache_maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white)
+
+[![License](https://img.shields.io/github/license/cdf144/uet-oasis-oop?style=for-the-badge&logo=starship&color=6CA3F5&logoColor=0bcd74&labelColor=464646)](https://github.com/cdf144/uet-oasis-oop/blob/master/LICENSE)
+[![Last Commit](https://img.shields.io/github/last-commit/cdf144/uet-oasis-oop?style=for-the-badge&logo=starship&color=6DCFF6&logoColor=0bcd74&labelColor=464646)](https://github.com/cdf144/uet-oasis-oop/pulse)
+[![Stars](https://img.shields.io/github/stars/cdf144/uet-oasis-oop?style=for-the-badge&logo=starship&color=6CF5F0&logoColor=0bcd74&labelColor=464646)](https://github.com/cdf144/uet-oasis-oop/stargazers)
+[![Repo size](https://img.shields.io/github/repo-size/cdf144/uet-oasis-oop?style=for-the-badge&logo=starship&color=6CF5C1&logoColor=0bcd74&labelColor=464646)](https://github.com/cdf144/uet-oasis-oop)
 
 ![logo-mini.89ecf79d.png](resources/logo-mini.89ecf79d.png)
 
-This is my personal repository of the OOP exercises on OASIS-UET I have done.
-
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+A repository containing my solutions (and JUnit tests for each one just for fun) to the OOP exercises on OASIS-UET.
 
 ### Link to each exercise
 
@@ -30,7 +34,7 @@ This is my personal repository of the OOP exercises on OASIS-UET I have done.
 - TUẦN 8
   - [Đa hình 1](https://github.com/cdf144/uet-oasis-oop/tree/master/src/main/java/Week8/Da_hinh_1)
   - [Đa hình 2](https://github.com/cdf144/uet-oasis-oop/tree/master/src/main/java/Week8/Da_hinh_2)
-  - [Đa hình 3](https://github.com/cdf144/uet-oasis-oop/tree/master/src/main/java/Week8/Da_hinh_3`)
+  - [Đa hình 3](https://github.com/cdf144/uet-oasis-oop/tree/master/src/main/java/Week8/Da_hinh_3)
 - TUẦN 9
   - [Bài kiểm tra số 1 - Abstract](https://github.com/cdf144/uet-oasis-oop/tree/master/src/main/java/Week9/BKT1_Abstract)
 - TUẦN 10
@@ -51,25 +55,8 @@ This is my personal repository of the OOP exercises on OASIS-UET I have done.
 - TUẦN 16
   - [Banking System](https://github.com/cdf144/uet-oasis-oop/tree/master/src/main/java/Week16/Banking_System)
 
-
 ### Notes
 
-- These source codes are for referencing/educational purposes only. If you are also doing exercises on OASIS, **I will not be responsible for you being detected for code copying/plagiarism**.  
-(Yes, OASIS does have a code plagiarism detection, though my knowledge is limited on how deep the checking is)
-- These are just my answers to the exercises, and *only* as answers to exercises, no extra functions included. **The answers will pass all test cases but expect them to be not as elegant as you'd like**.
-- There are also custom JUnit Tests I made just because I wanted to practice making Unit Tests.
-You can also reference or even use those to your liking.
-- This repository is licensed under the _GNU GPLv3_ license.
-> The GPL _does not require you to release your modified version_, or any part of it.
-> 
-> You are _free to make modifications and use them privately_, without ever releasing them.
-> This applies to organizations (including companies), too;
-> an organization can make a modified version and use it internally without ever releasing it outside the organization.
-> 
-> But _if you release the modified version to the public in some way_,
-> the GPL requires you to _make the modified source code available_ to the program's users, _under the GPL_.
-> 
-> Thus, the GPL gives permission to release the modified program in certain ways,
-> and not in other ways; but the decision of whether to release it is up to you.
-
-[GPL FAQ](https://www.gnu.org/licenses/gpl-faq.html#GPLRequireSourcePostedPublic) - _GNU Project_. Free Software Foundation.
+- These source codes are for reference/educational purposes only. **UET-OASIS does have code copy/plagiarism detection**, so that's one thing to keep in mind before you copy and paste my code :wink:
+- The answers will pass all test cases but expect them to be not as elegant as you'd like :sweat_smile: ~~(I definitely didn't revisit this repo one year later and cringe at my old code)~~
+- There are also custom JUnit Tests I made just because I wanted to practice making Unit Tests :upside_down_face: You can also reference or use those to your liking
